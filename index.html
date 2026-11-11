@@ -432,6 +432,10 @@ footer p{opacity:.8;max-width:46em}
 
 <script>
 (function(){
+/* 打开时检查是否有新版，有则带版本号重新加载，避开微信和 CDN 缓存 */
+var VER="5";
+try{var x=new XMLHttpRequest();x.open("GET","v.txt?t="+Date.now(),true);x.onload=function(){var n=(x.responseText||"").trim();
+  if(x.status===200&&/^\d+$/.test(n)&&+n>+VER&&location.search.indexOf("v="+n)<0)location.replace(location.pathname+"?v="+n+location.hash)};x.send()}catch(_){}
 document.documentElement.className+=" js";
 var $=function(i){return document.getElementById(i)};
 
