@@ -176,7 +176,7 @@ a.chip::after{content:" ↗";color:var(--grass-d)}
 .lg li{display:flex;gap:8px;align-items:baseline;color:var(--ink2)}
 .lg b{color:var(--ink);white-space:nowrap}
 .ag{display:inline-block;font-style:normal;font-family:var(--fn);font-weight:700;font-size:11px;line-height:16px;min-width:16px;height:16px;text-align:center;border-radius:4px;color:#fff;margin-right:5px;padding:0 3px;flex:none;vertical-align:1px}
-.ag-o{background:#C2571A}.ag-g{background:var(--ink)}.ag-c{background:var(--grass-d)}.ag-r{background:#8A8F87}.ag-h{background:var(--gold)}
+.ag-o{background:#C2571A}.ag-g{background:var(--ink)}.ag-c{background:var(--grass-d)}.ag-r{background:#5B4B8A}.ag-h{background:var(--gold)}
 .draft{display:inline-block;font-size:11px;font-weight:700;border:1px dashed currentColor;border-radius:4px;padding:0 6px;margin-bottom:10px;opacity:.8;align-self:flex-start}
 .slc em{display:block;font-style:normal;margin-top:6px;font-size:12px}
 .srcs h4{font-size:13px;margin:14px 0 2px;break-after:avoid}
@@ -290,7 +290,7 @@ footer p{opacity:.8;max-width:46em}
     <li><i class="ag ag-o">O</i><b>OpenClaw</b>小红书调研，178 篇笔记</li>
     <li><i class="ag ag-g">G</i><b>Grokbot</b>港新本地平台口碑与网店价格，2026-11-12 抓取</li>
     <li><i class="ag ag-c">C</i><b>Claude</b>公开网页调研（竞品、对标案例），并汇总成本手册</li>
-    <li><i class="ag ag-r">?</i><b>来源待确认</b>内地消费者洞察报告，出自哪个智能体尚未确认</li>
+    <li><i class="ag ag-r">R</i><b>Raven</b>内地消费者洞察报告</li>
     <li><i class="ag ag-h">人</i><b>团队提供</b>仅内部售价一项</li>
   </ul>
   <p>每条来源前的字母标明出自哪个智能体。“可考虑”和“可讨论”的内容是 Claude 基于这些数据的推断，不是结论。</p>
@@ -491,7 +491,7 @@ var S={
  cnr:["内地消费者洞察报告 2026-11","","内部"],
  vi:["行舟品牌咨询：悦鲜活品牌色与包装","https://www.sohu.com/a/877463689_406106","品牌咨询方"]
 };
-var AG={o:["o","O","OpenClaw · 小红书调研"],g:["g","G","Grokbot · 港新本地平台与价格"],c:["c","C","Claude · 公开网页调研"],r:["r","?","来源待确认 · 内地消费者洞察报告"],h:["h","人","团队提供"]};
+var AG={o:["o","O","OpenClaw · 小红书调研"],g:["g","G","Grokbot · 港新本地平台与价格"],c:["c","C","Claude · 公开网页调研"],r:["r","R","Raven · 内地消费者洞察报告"],h:["h","人","团队提供"]};
 var AGK={xhs:"o",price:"h",cnr:"r",ffs:"r",meihua:"r",kr36:"r",daofa:"r",ej21:"r",rpzj:"r",grok:"g",wel:"g",pns:"g",lihkg1:"g",lihkg2:"g",disc:"g",cfs:"g",fpfj:"g",cs:"g",hwz1:"g",hwz2:"g"};
 function ag(k){var a=AG[AGK[k]||"c"];return '<i class="ag ag-'+a[0]+'">'+a[1]+'</i>'}
 function chip(k){var s=S[k];s=[ag(k)+s[0],s[1],s[2]];return s[1]?'<a class="chip" href="'+s[1]+'" target="_blank" rel="noopener noreferrer">'+s[0]+'</a>':'<span class="chip in">'+s[0]+'</span>'}
