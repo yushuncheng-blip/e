@@ -11,7 +11,7 @@
 <style>
 /* 视觉：鲜草绿 + 暗夜黑 双色，奶牛纹与奶滴作图形，数字放大（参照 0.09 的包装做法）。全部系统字体，无外部资源。 */
 :root{
-  --milk:#F7F8F2; --card:#FFFFFF; --ink:#0E1210; --ink2:#55605A; --line:#E1E5DA;
+  --milk:#F7F8F2; --card:#FFFFFF; --ink:#14362A; --ink2:#55605A; --line:#E1E5DA;
   --grass:#3FAE2A; --grass-d:#1E7A14; --grass-s:#E7F5E1; --gold:#B8912A; --warn:#B4541A; --warn-s:#FBEBDD;
   --f:-apple-system,BlinkMacSystemFont,"PingFang SC","PingFang HK","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Noto Sans SC",sans-serif;
   --fn:"DIN Alternate","Avenir Next Condensed","Helvetica Neue","Arial Narrow",Arial,sans-serif;
@@ -177,7 +177,7 @@ a.chip::after{content:" ↗";color:var(--grass-d)}
 .lg li{display:flex;gap:8px;align-items:baseline;color:var(--ink2)}
 .lg b{color:var(--ink);white-space:nowrap}
 .ag{display:inline-block;font-style:normal;font-family:var(--fn);font-weight:700;font-size:11px;line-height:16px;min-width:16px;height:16px;text-align:center;border-radius:4px;color:#fff;margin-right:5px;padding:0 3px;flex:none;vertical-align:1px}
-.ag-o{background:#C2571A}.ag-g{background:var(--ink)}.ag-c{background:var(--grass-d)}.ag-r{background:#5B4B8A}.ag-h{background:var(--gold)}
+.ag-o{background:#C2571A}.ag-g{background:#0B0F0D}.ag-c{background:var(--grass-d)}.ag-r{background:#5B4B8A}.ag-h{background:var(--gold)}
 .draft{display:inline-block;font-size:11px;font-weight:700;border:1px dashed currentColor;border-radius:4px;padding:0 6px;margin-bottom:10px;opacity:.8;align-self:flex-start}
 .slc em{display:block;font-style:normal;margin-top:6px;font-size:12px}
 .srcs h4{font-size:13px;margin:14px 0 2px;break-after:avoid}
@@ -253,16 +253,72 @@ footer p{opacity:.8;max-width:46em}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
 @media(max-width:719px){.b2,.b3,.drop{display:none}.b1{width:44vw;height:40vw;right:-15vw;top:-13vw}.b4{left:auto;right:-12vw;bottom:-20vw;width:40vw;height:28vw}
  .core::after{width:120px;height:110px;right:-58px;top:-68px;bottom:auto}.part p{max-width:60%}.part::after{width:150px;height:134px;right:-56px;top:-46px}}
+
+/* ---------- 封面：深绿底、白奶瓶、奶滴 ---------- */
+.hero{background:var(--ink);color:#fff;justify-content:flex-start;padding:128px 0 96px;min-height:0;--bt:-26px;--fall:50px}
+.curtain{position:absolute;left:0;right:0;top:0;height:40px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='40'%3E%3Cpath fill='%23F7F8F2' d='M0 0h220v8c-8 0-10 4-12 10s-8 6-10 0-4-10-12-10-12 2-14 14-10 12-12 0-6-14-16-14-10 4-12 8-8 4-10 0-6-8-16-8-12 6-14 20-12 14-14 0-8-20-18-20-10 4-12 12-8 8-10 0-4-12-16-12z'/%3E%3C/svg%3E") repeat-x right top}
+.top{position:relative}
+.hero h1{margin-top:16px}
+.hero h1 em{color:#A6E596}
+.hero .eyebrow{color:var(--ink);border-color:#fff}
+.hero .claim mark{background:linear-gradient(transparent 60%,rgba(126,217,87,.5) 60%);color:#fff}
+.hero .sub{color:rgba(255,255,255,.78)}
+.hero .fact{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.55)}
+.hero .fact small{color:rgba(255,255,255,.75)}
+.hero .steps a{border-color:#fff;color:var(--ink)}
+.hero .scroll{color:rgba(255,255,255,.75)}.hero .scroll::before{background:#fff}
+.bottle{position:absolute;right:2px;top:var(--bt);height:calc(100% - var(--bt) + 8px);aspect-ratio:120/252;animation:bin 1.1s cubic-bezier(.2,.9,.2,1) both,bfloat 5s ease-in-out 1.1s infinite}
+.bsvg{height:100%;transform-origin:50% 100%;animation:bsq 4.6s ease-in-out infinite;filter:drop-shadow(0 14px 16px rgba(0,0,0,.35))}
+.bsvg svg{height:100%;width:auto;display:block}
+.tap{position:absolute;left:50%;margin-left:-7px;top:calc(-128px - var(--bt));width:14px;height:calc(128px + var(--bt) - var(--fall));background:var(--milk);border-radius:0 0 7px 7px;animation:bcounter 5s ease-in-out 1.1s infinite}
+.mdrop{position:absolute;left:50%;top:calc(-1*var(--fall) - 6px);width:14px;height:14px;margin-left:-7px;background:#fff;border-radius:0 55% 55% 55%;transform:rotate(45deg) scale(0);animation:mdrop 4.6s cubic-bezier(.55,0,.9,.5) infinite}
+.sp{position:absolute;left:50%;top:0;width:6px;height:6px;margin-left:-3px;background:#fff;border-radius:50%;opacity:0;animation:sp 4.6s ease-out infinite}
+.s1{--x:-22px;--y:-20px}.s2{--x:20px;--y:-24px}.s3{--x:3px;--y:-30px}
+.tw{position:absolute;width:10px;height:10px;opacity:0;background:linear-gradient(#A6E596,#A6E596) center/100% 2px no-repeat,linear-gradient(#A6E596,#A6E596) center/2px 100% no-repeat;animation:tw 3.2s ease-in-out infinite}
+.t1{left:-16px;top:34%}.t2{right:-10px;top:58%;animation-delay:1.1s}.t3{left:-8px;top:82%;animation-delay:2s}
+@keyframes bin{from{opacity:0;transform:translate(40px,30px) rotate(14deg)}to{opacity:1;transform:none}}
+@keyframes bfloat{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-7px) rotate(-2.5deg)}}
+@keyframes bcounter{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+@keyframes bsq{0%,36%,52%,100%{transform:scale(1)}40%{transform:scale(1.05,.95)}45%{transform:scale(.98,1.03)}}
+@keyframes mdrop{0%{transform:translateY(0) rotate(45deg) scale(0);opacity:1}22%{transform:translateY(0) rotate(45deg) scale(1);opacity:1}37%{transform:translateY(var(--fall)) rotate(45deg) scale(1);opacity:1}39%,100%{transform:translateY(var(--fall)) rotate(45deg) scale(1.6,.3);opacity:0}}
+@keyframes sp{0%,37%{opacity:0;transform:translate(0,0) scale(1)}39%{opacity:1}55%{opacity:0;transform:translate(var(--x),var(--y)) scale(.4)}100%{opacity:0}}
+@keyframes tw{0%,100%{opacity:0;transform:scale(.3) rotate(0)}50%{opacity:1;transform:scale(1) rotate(90deg)}}
+.wave{position:absolute;left:0;bottom:-1px;width:200%;height:56px;display:block}
+.wave .w1{fill:var(--milk);animation:wv 9s linear infinite}
+.wave .w2{fill:rgba(247,248,242,.4);animation:wv 14s linear infinite reverse}
+@keyframes wv{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.hero .top>.eyebrow,.hero h1 span,.hero .claim,.hero .sub,.hero .facts,.hero .steps,.hero .scroll{animation:hin .8s cubic-bezier(.2,.8,.2,1) both}
+.hero h1 span:nth-child(1){animation-delay:.1s}.hero h1 span:nth-child(2){animation-delay:.2s}.hero h1 span:nth-child(3){animation-delay:.3s}
+.hero .claim{animation-delay:.45s}.hero .sub{animation-delay:.55s}.hero .facts{animation-delay:.65s}.hero .steps{animation-delay:.75s}.hero .scroll{animation-delay:.9s}
+@keyframes hin{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@media(min-width:720px){.hero{--bt:-70px;--fall:34px;padding-bottom:120px}.bottle{right:9%;height:calc(100% - var(--bt) + 150px)}.wave{height:80px}}
+@media(max-width:359px){.bottle{height:calc(100% - var(--bt) - 22px);right:-4px}.hero .eyebrow{letter-spacing:.06em}}
+@media(prefers-reduced-motion:reduce){.hero *{animation:none!important}.mdrop,.sp,.tw{display:none}}
 </style>
 </head>
 <body data-mk="hk">
 
 <header class="hero">
-  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="blob b4"></div>
-  <div class="drop" aria-hidden="true"><i></i><b></b><b></b></div>
+  <div class="curtain" aria-hidden="true"></div>
   <div class="w">
-    <span class="eyebrow">悦鲜活 Freshjoy · 讨论稿</span>
-    <h1><span>港新</span><span>全媒体</span><span><em>营销手册</em></span></h1>
+    <div class="top">
+      <span class="eyebrow">悦鲜活 Freshjoy · 讨论稿</span>
+      <h1><span>港新</span><span>全媒体</span><span><em>营销手册</em></span></h1>
+      <div class="bottle" aria-hidden="true"><i class="tap"></i><i class="mdrop"></i><i class="sp s1"></i><i class="sp s2"></i><i class="sp s3"></i><i class="tw t1"></i><i class="tw t2"></i><i class="tw t3"></i><div class="bsvg"><svg viewBox="0 0 120 252" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="悦鲜活 Freshjoy 奶瓶示意图">
+<defs><linearGradient id="bg" x1="0" x2="1"><stop offset="0" stop-color="#EEF3EE"/><stop offset=".35" stop-color="#FFFFFF"/><stop offset="1" stop-color="#D9E3DC"/></linearGradient>
+<clipPath id="bc"><path d="M40 36H80C80 50 104 54 104 76V232Q104 246 90 246H30Q16 246 16 232V76C16 54 40 50 40 36Z"/></clipPath></defs>
+<rect x="38" y="4" width="44" height="27" rx="5" fill="#fff"/><path d="M46 8v19M54 8v19M62 8v19M70 8v19M78 8v19" stroke="#D5DED8" stroke-width="1.2"/>
+<rect x="40" y="30" width="40" height="7" fill="#E6ECE7"/>
+<path d="M40 36H80C80 50 104 54 104 76V232Q104 246 90 246H30Q16 246 16 232V76C16 54 40 50 40 36Z" fill="url(#bg)"/>
+<g clip-path="url(#bc)"><path d="M10 188C24 180 32 198 42 193C49 190 50 208 57 208C64 208 63 189 73 191C86 193 92 182 110 189V250H10Z" fill="#1F5A45"/>
+<text x="25" y="232" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="25" fill="#7ED957" letter-spacing="-1">0.09</text></g>
+<g font-family="Arial,Helvetica,sans-serif" fill="#14362A" font-weight="800"><text x="23" y="107" font-size="27" letter-spacing="-1">Fresh</text><text x="31" y="134" font-size="27" letter-spacing="-1">Joy</text>
+<rect x="70" y="119" width="30" height="17" rx="4" fill="#CDEBB8"/><text x="85" y="127.5" font-size="7" text-anchor="middle">100%</text><text x="85" y="133.5" font-size="4.6" text-anchor="middle">Fresh Milk</text>
+<text x="25" y="150" font-size="5.4">RAW MILK QUALITY</text><text x="25" y="157" font-size="4.6" font-weight="700">EXCEEDING EU STANDARD</text></g>
+<circle cx="91" cy="169" r="9.5" fill="#C8323F"/><text x="91" y="171.5" font-family="Arial,sans-serif" font-size="6.4" font-weight="800" fill="#fff" text-anchor="middle">No.1</text>
+<path d="M40 36H80C80 50 104 54 104 76V232Q104 246 90 246H30Q16 246 16 232V76C16 54 40 50 40 36Z" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1"/>
+</svg></div></div>
+    </div>
     <p class="claim"><mark>先看市场，再定策略，</mark><br><mark>最后是营销方式。</mark></p><p class="sub">由 AI 智能体自主调研整理，供海外市场部讨论和逐步细化的框架。</p>
     <div class="facts">
       <div class="fact"><span class="n">HK$23</span><small>香港 · 950ml 促销价（原价 35）</small></div>
@@ -271,6 +327,7 @@ footer p{opacity:.8;max-width:46em}
     <div class="steps"><a href="#p1"><small>一</small>看市场</a><a href="#p2"><small>二</small>定策略</a><a href="#p3"><small>三</small>营销方式</a></div>
     <div class="scroll">往下看 · 右上角切换市场</div>
   </div>
+  <svg class="wave" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path class="w2" d="M0 30C100 10 200 50 300 30S500 10 600 30S800 50 900 30S1100 10 1200 30V60H0Z"/><path class="w1" d="M0 36C100 56 200 16 300 36S500 56 600 36S800 16 900 36S1100 56 1200 36V60H0Z"/></svg>
 </header>
 
 <nav class="bar" aria-label="章节与市场">
@@ -419,7 +476,7 @@ footer p{opacity:.8;max-width:46em}
   <div class="note rv"><b>没覆盖到的：</b>Instagram、Facebook、Threads、TikTok、Lemon8 要登录或打不开，本地社媒上的盲测、开箱、教程视频没法评估。港新本地一手评价只有 5 条，样本太小；连登讨论偏情绪化。小红书调研 178 篇中港新本地作者仅约 5 篇。价格是 2026-11-12 的网店价，门店价和限时价可能不同。</div>
   <div class="note rv"><b>关于核对：</b>Grokbot 的链接由 Claude 抽查了 5 个，惠康、FairPrice、食安中心、HardwareZone 4 个与原文一致，连登打不开未能核对。其余来源没有逐条复核。</div>
   <div class="note rv"><b>关于内地报告：</b>标有“内地”的来源讲的是内地市场，人群、场景和渠道结论搬到港新属于推断，需要小量测试验证。其中小红书非商业笔记占比来自第三方转引，原始数据未能直接核实。</div>
-  <div class="note rv"><b>关于视觉：</b>本页配色依据品牌咨询方行舟的公开文章，悦鲜活品牌色为“鲜草绿”和“暗夜黑”，图形为奶牛纹和奶滴，包装突出 0.09 数字。文章没有给出色值，本页色值是按描述取的近似值，拿到 VI 规范后可替换。</div>
+  <div class="note rv"><b>关于视觉：</b>封面的奶瓶和配色参照顺成提供的新加坡活动现场包装照片绘制：白瓶白盖、深绿色 Fresh Joy 字样、浅绿“100% Fresh Milk”标、红色 No.1 标、带奶滴边的深绿底栏。奶瓶是示意图，色值按照片估取，不是官方 VI 色值。</div>
 </div></section>
 
 </main>
@@ -433,7 +490,7 @@ footer p{opacity:.8;max-width:46em}
 <script>
 (function(){
 /* 打开时检查是否有新版，有则带版本号重新加载，避开微信和 CDN 缓存 */
-var VER="5";
+var VER="6";
 try{var x=new XMLHttpRequest();x.open("GET","v.txt?t="+Date.now(),true);x.onload=function(){var n=(x.responseText||"").trim();
   if(x.status===200&&/^\d+$/.test(n)&&+n>+VER&&location.search.indexOf("v="+n)<0)location.replace(location.pathname+"?v="+n+location.hash)};x.send()}catch(_){}
 document.documentElement.className+=" js";
