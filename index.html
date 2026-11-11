@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="color-scheme" content="light only">
+<meta name="format-detection" content="telephone=no">
+<title>悦鲜活 港新全媒体营销手册</title>
+<meta name="description" content="海外市场部内部参考">
+<style>
+/* 视觉：鲜草绿 + 暗夜黑 双色，奶牛纹与奶滴作图形，数字放大（参照 0.09 的包装做法）。全部系统字体，无外部资源。 */
+:root{
+  --milk:#F7F8F2; --card:#FFFFFF; --ink:#0E1210; --ink2:#55605A; --line:#E1E5DA;
+  --grass:#3FAE2A; --grass-d:#1E7A14; --grass-s:#E7F5E1; --gold:#B8912A; --warn:#B4541A; --warn-s:#FBEBDD;
+  --f:-apple-system,BlinkMacSystemFont,"PingFang SC","PingFang HK","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Noto Sans SC",sans-serif;
+  --fn:"DIN Alternate","Avenir Next Condensed","Helvetica Neue","Arial Narrow",Arial,sans-serif;
+  --r:18px; --pad:max(18px,env(safe-area-inset-left,0px));
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--milk);color:var(--ink);font-family:var(--f);font-size:15px;line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4,p,ul,ol{margin:0;padding:0} ul,ol{list-style:none}
+a{color:inherit} button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;padding:0}
+.w{max-width:980px;margin:0 auto;padding:0 var(--pad)}
+.n{font-family:var(--fn);font-weight:700;letter-spacing:-.01em}
+
+/* ---------- 封面 ---------- */
+.hero{position:relative;min-height:92vh;min-height:92svh;display:flex;flex-direction:column;justify-content:flex-end;padding:88px 0 40px;overflow:hidden;background:var(--milk)}
+.blob{position:absolute;background:var(--ink);border-radius:58% 42% 63% 37%/44% 59% 41% 56%;animation:morph 16s ease-in-out infinite alternate;will-change:border-radius,transform}
+.b1{width:62vw;height:56vw;max-width:520px;max-height:470px;right:-18vw;top:-12vw}
+.b2{width:30vw;height:27vw;max-width:260px;max-height:230px;left:-14vw;top:9%;animation-duration:21s;animation-delay:-6s}
+.b3{width:20vw;height:18vw;max-width:150px;max-height:136px;right:14%;top:40%;animation-duration:13s;animation-delay:-3s}
+.b4{width:46vw;height:30vw;max-width:360px;max-height:230px;left:38%;bottom:-16vw;animation-duration:19s;animation-delay:-9s;background:var(--grass)}
+@keyframes morph{
+  0%{border-radius:58% 42% 63% 37%/44% 59% 41% 56%;transform:rotate(0) scale(1)}
+  50%{border-radius:41% 59% 38% 62%/57% 40% 60% 43%;transform:rotate(7deg) scale(1.04)}
+  100%{border-radius:63% 37% 52% 48%/38% 62% 45% 55%;transform:rotate(-5deg) scale(.98)}}
+.drop{position:absolute;right:20%;top:0;width:54px;height:100%;pointer-events:none}
+.drop i{position:absolute;left:50%;top:-40px;width:22px;height:22px;margin-left:-11px;background:#fff;border-radius:0 60% 60% 60%;transform:rotate(45deg);box-shadow:0 0 0 2px var(--ink) inset;animation:fall 4.2s cubic-bezier(.6,0,.9,.6) infinite}
+.drop b{position:absolute;left:50%;top:44%;width:10px;height:4px;margin:0 0 0 -5px;border:2px solid var(--grass);border-radius:50%;opacity:0;animation:ring 4.2s ease-out infinite}
+.drop b+b{animation-delay:.25s}
+@keyframes fall{0%{top:-40px;opacity:1}38%{top:44%;opacity:1}40%,100%{top:44%;opacity:0}}
+@keyframes ring{0%,38%{opacity:0;transform:scale(1)}42%{opacity:.9}75%,100%{opacity:0;transform:scale(9,5)}}
+.hero .w{position:relative;width:100%}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.16em;font-weight:600;background:var(--card);border:1.5px solid var(--ink);border-radius:999px;padding:5px 12px}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--grass)}
+.hero h1{font-size:clamp(44px,13vw,104px);line-height:1.02;font-weight:900;letter-spacing:-.02em;margin:18px 0 0}
+.hero h1 span{display:block}
+.hero h1 em{font-style:normal;color:var(--grass-d);-webkit-text-stroke:0}
+.claim{margin-top:20px;font-size:clamp(17px,4.6vw,24px);font-weight:700;line-height:1.4;max-width:20em}
+.claim mark{background:linear-gradient(transparent 58%,#BDEBB1 58%);color:inherit;padding:0 2px}
+.sub{margin-top:10px;color:var(--ink2);max-width:24em}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:26px;max-width:560px}
+.fact{background:var(--card);border:1.5px solid var(--ink);border-radius:var(--r);padding:12px 14px}
+.fact .n{font-size:30px;line-height:1.05;display:block}
+.fact small{font-size:12px;color:var(--ink2);display:block;margin-top:2px}
+.scroll{margin-top:26px;font-size:12px;color:var(--ink2);letter-spacing:.1em;display:flex;align-items:center;gap:8px}
+.scroll::before{content:"";width:1.5px;height:26px;background:var(--ink);animation:tick 1.8s ease-in-out infinite;transform-origin:top}
+@keyframes tick{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* ---------- 顶栏 ---------- */
+.bar{position:-webkit-sticky;position:sticky;top:0;z-index:50;background:rgba(247,248,242,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1.5px solid var(--ink)}
+.bar-in{max-width:980px;margin:0 auto;display:flex;align-items:center;gap:8px;padding:8px var(--pad);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+.chs{flex:1;min-width:0;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.chs::-webkit-scrollbar{display:none}
+.chs a{flex:none;text-decoration:none;font-size:13px;font-weight:600;padding:6px 11px;border-radius:999px;color:var(--ink2);white-space:nowrap;transition:background .2s,color .2s}
+.chs a.on{background:var(--ink);color:#fff}
+.mk{flex:none;display:flex;border:1.5px solid var(--ink);border-radius:999px;overflow:hidden;background:var(--card)}
+.mk button{font-size:13px;font-weight:700;padding:6px 12px;min-height:32px}
+.mk button[aria-pressed=true]{background:var(--grass);color:#fff}
+.prog{height:3px;background:var(--grass);transform:scaleX(0);transform-origin:left}
+body[data-mk=hk] [data-m=sg],body[data-mk=sg] [data-m=hk]{display:none!important}
+
+/* ---------- 章节 ---------- */
+section{padding:56px 0 8px;scroll-margin-top:60px}
+.hd{display:flex;align-items:flex-end;gap:14px;margin-bottom:8px}
+.hd .no{font-family:var(--fn);font-weight:700;font-size:64px;line-height:.82;color:var(--grass);letter-spacing:-.03em}
+.hd h2{font-size:clamp(24px,6.4vw,34px);font-weight:900;line-height:1.15}
+.lead{color:var(--ink2);max-width:40em;margin-bottom:18px}
+.grid{display:grid;gap:12px}
+@media(min-width:720px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}}
+
+/* 维度卡：说明 / 打法 / 来源 */
+.dim{background:var(--card);border:1.5px solid var(--ink);border-radius:var(--r);overflow:hidden}
+.dim summary{list-style:none;display:grid;grid-template-columns:auto 1fr auto;gap:4px 12px;align-items:center;padding:14px 16px;cursor:pointer}
+.dim summary::-webkit-details-marker{display:none}
+.dim .ix{font-family:var(--fn);font-weight:700;font-size:13px;background:var(--ink);color:#fff;border-radius:999px;padding:2px 9px;white-space:nowrap}
+#reviews,#offs{counter-reset:d}
+.dim{counter-increment:d}
+.dim .ix::after{content:counter(d,decimal-leading-zero)}
+.dim h3{font-size:17px;font-weight:800;line-height:1.3}
+.dim .say{grid-column:1/-1;color:var(--ink2);font-size:14px}
+.dim .pm{width:26px;height:26px;border-radius:50%;border:1.5px solid var(--ink);position:relative;flex:none;transition:transform .3s,background .3s}
+.dim .pm::before,.dim .pm::after{content:"";position:absolute;left:50%;top:50%;width:10px;height:1.5px;background:var(--ink);margin:-.75px 0 0 -5px}
+.dim .pm::after{transform:rotate(90deg);transition:transform .3s}
+.dim[open] .pm{background:var(--grass);border-color:var(--grass)}
+.dim[open] .pm::before,.dim[open] .pm::after{background:#fff}
+.dim[open] .pm::after{transform:rotate(0)}
+.dim .bd{padding:0 16px 16px;animation:open .35s ease}
+@keyframes open{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.row{display:grid;grid-template-columns:42px 1fr;gap:10px;padding-top:12px;margin-top:12px;border-top:1px dashed var(--line);font-size:14px}
+.row>b{font-size:12px;letter-spacing:.08em;color:var(--grass-d);padding-top:2px}
+.row li{position:relative;padding-left:14px;margin:2px 0}
+.row li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--grass)}
+.chip{display:inline-block;font-size:12px;line-height:1.5;padding:1px 9px;margin:0 4px 5px 0;border-radius:999px;border:1px solid var(--line);background:var(--milk);color:var(--ink2);text-decoration:none}
+a.chip::after{content:" ↗";color:var(--grass-d)}
+.chip.in{border-style:dashed}
+.tagm{font-size:11px;font-weight:700;border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:2px;background:var(--grass-s);color:var(--grass-d);white-space:nowrap}
+
+/* 主张 */
+.core{background:var(--ink);color:#fff;border-radius:26px;padding:26px 20px;position:relative;overflow:hidden}
+.core::after{content:"";position:absolute;right:-70px;bottom:-80px;width:230px;height:210px;background:var(--grass);border-radius:58% 42% 63% 37%/44% 59% 41% 56%;animation:morph 15s ease-in-out infinite alternate;opacity:.95}
+.core>*{position:relative;z-index:1}
+.core small{font-size:12px;letter-spacing:.16em;opacity:.7}
+.core h3{font-size:clamp(26px,7.6vw,46px);font-weight:900;line-height:1.2;margin-top:8px}
+.core h3 i{font-style:normal;color:#8BE077}
+.local{margin-top:16px;font-size:17px;font-weight:700;border-left:3px solid #8BE077;padding-left:12px;max-width:22em}
+.local span{display:block;font-size:12px;font-weight:500;opacity:.7;letter-spacing:.06em}
+.proof{margin-top:12px}
+.pf{background:var(--card);border:1.5px solid var(--ink);border-radius:var(--r);padding:14px 16px}
+.pf .n{font-size:34px;line-height:1;color:var(--grass-d)}
+.pf .n small{font-size:13px;font-family:var(--f);color:var(--ink2);font-weight:500;margin-left:3px}
+.pf h4{font-size:15px;font-weight:800;margin:6px 0 2px}
+.pf p{font-size:13.5px;color:var(--ink2);margin-bottom:8px}
+
+.back{margin-top:12px;border:1.5px dashed var(--ink);border-radius:var(--r);padding:14px 16px;font-size:14px}
+.back ul{display:grid;gap:8px;margin:10px 0}
+@media(min-width:720px){.back ul{grid-template-columns:repeat(3,1fr)}}
+.back li{display:flex;align-items:baseline;gap:10px;color:var(--ink2)}
+.back li .n{font-size:22px;color:var(--ink);flex:none;min-width:58px}
+.tagm.cn{background:#EFEFE8;color:var(--ink2)}
+/* 页签 */
+.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:0 calc(-1*var(--pad)) 12px;padding:2px var(--pad)}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none;font-size:14px;font-weight:700;padding:8px 14px;border-radius:999px;border:1.5px solid var(--ink);background:var(--card);white-space:nowrap;transition:background .2s,color .2s,transform .2s}
+.tabs button[aria-selected=true]{background:var(--ink);color:#fff}
+.tabs button:active{transform:scale(.96)}
+.panel{background:var(--card);border:1.5px solid var(--ink);border-radius:var(--r);padding:18px 16px;animation:open .35s ease}
+.panel .role{display:inline-block;font-size:12px;font-weight:700;color:var(--grass-d);background:var(--grass-s);border-radius:999px;padding:2px 10px;margin-bottom:6px}
+.panel h3{font-size:22px;font-weight:900;line-height:1.25}
+.panel .say{color:var(--ink2);font-size:14px;margin-top:4px}
+.kpi{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.kpi span{font-size:12.5px;border:1.5px solid var(--ink);border-radius:10px;padding:5px 10px;background:var(--milk)}
+.kpi span b{font-family:var(--fn);font-size:17px;margin-right:4px}
+
+/* 对标 */
+.bm{border-radius:var(--r);padding:16px;border:1.5px solid var(--ink);background:var(--card)}
+.bm.dark{background:var(--grass-s)}
+.bm small{font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--grass-d)}
+.bm h3{font-size:20px;font-weight:900;margin:2px 0 6px}
+.bm p{font-size:14px;color:var(--ink2)}
+.bm .n{font-size:28px;display:block;line-height:1.1;margin-top:10px}
+.bm .n small{font-family:var(--f);font-size:12.5px;color:var(--ink2);font-weight:500;letter-spacing:0;display:block}
+
+/* 广告语 */
+.sl{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(-1*var(--pad));padding:4px var(--pad) 12px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.sl::-webkit-scrollbar{display:none}
+.slc{flex:none;width:78%;max-width:340px;scroll-snap-align:center;background:var(--card);border:1.5px solid var(--ink);border-radius:22px;padding:18px;display:flex;flex-direction:column;justify-content:space-between;min-height:190px;position:relative;overflow:hidden}
+.slc:nth-child(odd){background:var(--ink);color:#fff}
+.slc q{quotes:none;font-size:22px;font-weight:900;line-height:1.35}
+.slc div{font-size:12.5px;opacity:.75;margin-top:14px;padding-right:48px}
+.slc div b{display:block;font-size:13px;opacity:1}
+.slc::after{content:"";position:absolute;right:-30px;bottom:-34px;width:84px;height:76px;background:var(--grass);border-radius:58% 42% 63% 37%/44% 59% 41% 56%}
+.rules{counter-reset:r}
+.rules li{counter-increment:r;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;border-top:1.5px solid var(--ink);font-size:14px}
+.rules li::before{content:"0" counter(r);font-family:var(--fn);font-weight:700;font-size:20px;color:var(--grass-d)}
+.rules b{display:block;font-size:15.5px}
+
+/* 节奏 */
+.tl{position:relative;padding-left:26px}
+.tl::before{content:"";position:absolute;left:8px;top:8px;bottom:8px;width:2px;background:var(--ink)}
+.ph{position:relative;background:var(--card);border:1.5px solid var(--ink);border-radius:var(--r);padding:14px 16px;margin-bottom:12px}
+.ph::before{content:"";position:absolute;left:-25px;top:18px;width:14px;height:14px;border-radius:50%;background:var(--grass);border:2px solid var(--ink)}
+.ph small{font-family:var(--fn);font-weight:700;font-size:13px;color:var(--grass-d)}
+.ph h3{font-size:18px;font-weight:900}
+.ph p{font-size:14px;color:var(--ink2);margin-top:4px}
+.ph .goal{margin-top:8px;font-size:13.5px;background:var(--grass-s);border-radius:10px;padding:8px 10px;color:var(--ink)}
+
+/* 红线 */
+.red{background:var(--card);border:1.5px solid var(--ink);border-left:8px solid var(--warn);border-radius:var(--r);padding:14px 16px}
+.red h3{font-size:16px;font-weight:800}
+.red p{font-size:14px;color:var(--ink2);margin-top:2px}
+.red p b{color:var(--ink)}
+
+/* 来源 */
+.srcs{columns:1;font-size:13.5px}
+@media(min-width:720px){.srcs{columns:2;column-gap:28px}}
+.srcs li{break-inside:avoid;padding:7px 0;border-bottom:1px solid var(--line)}
+.srcs a{text-decoration:none;border-bottom:1px solid var(--grass)}
+.srcs small{color:var(--ink2);margin-left:6px}
+.note{font-size:13px;color:var(--ink2);background:var(--card);border:1.5px dashed var(--ink2);border-radius:var(--r);padding:12px 14px;margin-top:14px}
+.note b{color:var(--ink)}
+footer{margin-top:56px;background:var(--ink);color:#fff;padding:28px 0 calc(34px + env(safe-area-inset-bottom,0px));font-size:12.5px;line-height:1.7}
+footer b{color:#8BE077}
+footer p{opacity:.8;max-width:46em}
+
+/* 进场 */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+:focus-visible{outline:2px solid var(--grass-d);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+</style>
+</head>
+<body data-mk="hk">
+
+<header class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="blob b4"></div>
+  <div class="drop" aria-hidden="true"><i></i><b></b><b></b></div>
+  <div class="w">
+    <span class="eyebrow">悦鲜活 · 海外市场部参考</span>
+    <h1><span>港新</span><span>全媒体</span><span><em>营销手册</em></span></h1>
+    <p class="claim"><mark>日本奶级别的口感，</mark><br><mark>更新鲜、更值得。</mark></p><p class="sub">这本手册只回答一件事：香港、新加坡每个平台和线下做什么内容。</p>
+    <div class="facts">
+      <div class="fact"><span class="n">HK$23</span><small>香港 · 950ml</small></div>
+      <div class="fact"><span class="n">S$8.65</span><small>新加坡 · 950ml 两瓶</small></div>
+    </div>
+    <div class="scroll">往下看 · 右上角切换市场</div>
+  </div>
+</header>
+
+<nav class="bar" aria-label="章节与市场">
+  <div class="bar-in">
+    <div class="chs" id="chs"></div>
+    <div class="mk" role="group" aria-label="切换市场">
+      <button type="button" data-k="hk" aria-pressed="true">香港</button>
+      <button type="button" data-k="sg" aria-pressed="false">新加坡</button>
+    </div>
+  </div>
+  <div class="prog" id="prog"></div>
+</nav>
+
+<main>
+
+<section id="claim" data-t="主张"><div class="w">
+  <div class="hd rv"><span class="no">01</span><h2>先统一说什么</h2></div>
+  <p class="lead rv">所有平台、所有物料只讲一个主张，三个证据轮流出场。</p>
+  <div class="core rv">
+    <small>核心主张</small>
+    <h3>日本奶级别的口感，<br><i>更新鲜、更值得。</i></h3>
+    <p class="local" data-m="hk"><span>香港 · 粤语主广告语</span>日本奶嘅口感，唔使日本奶嘅價錢。</p>
+    <p class="local" data-m="sg"><span>新加坡 · Singlish 主广告语</span>Japan milk taste, not Japan milk price. Steady lah!</p>
+  </div>
+  <div class="grid g3 proof" id="proof"></div>
+  <div class="back rv"><b>辅助背书</b><span class="tagm cn">内地事实，港新放二级信息</span>
+    <ul>
+      <li><span class="n">24.0%</span>2024 年中国高端鲜奶市占第一（弗若斯特沙利文口径）</li>
+      <li><span class="n">B 端</span>蜜雪冰城、古茗等连锁用它做奶底</li>
+      <li><span class="n">1 行</span>配料表只有生牛乳</li>
+    </ul><div id="backSrc"></div></div>
+</div></section>
+
+<section id="engine" data-t="引擎"><div class="w">
+  <div class="hd rv"><span class="no">02</span><h2>一个主张，三个引擎</h2></div>
+  <p class="lead rv">照搬两个对标：Skintific 的批量内容机器，加 Oatly 香港的咖啡入口。</p>
+  <div class="tabs rv" id="engTabs" role="tablist"></div>
+  <div id="engPanel" class="rv"></div>
+  <div class="grid g2" style="margin-top:12px" id="bms"></div>
+</div></section>
+
+<section id="review" data-t="测评"><div class="w">
+  <div class="hd rv"><span class="no">03</span><h2>测评内容做哪些</h2></div>
+  <p class="lead rv">八个固定模板，前六个来自港新调研和对标，后两个是内地已跑通的场景。每个模板都出粤语版和 Singlish 版，先小量测试，留下完播率和评论率最高的两个加量。点开看打法和来源。</p>
+  <div class="grid g2" id="reviews"></div>
+</div></section>
+
+<section id="platform" data-t="平台"><div class="w">
+  <div class="hd rv"><span class="no">04</span><h2>每个平台怎么打</h2></div>
+  <p class="lead rv"><span data-m="hk">香港以 Instagram、Threads、YouTube Shorts、小红书为主。</span><span data-m="sg">新加坡以 TikTok、Instagram 为主。</span>各平台各做各的形式，不一稿多发。</p>
+  <div data-m="hk"><div class="tabs rv" id="hkTabs" role="tablist"></div><div id="hkPanel" class="rv"></div></div>
+  <div data-m="sg"><div class="tabs rv" id="sgTabs" role="tablist"></div><div id="sgPanel" class="rv"></div></div>
+</div></section>
+
+<section id="offline" data-t="线下"><div class="w">
+  <div class="hd rv"><span class="no">05</span><h2>线下内容做哪些</h2></div>
+  <p class="lead rv">线下不为曝光，是为了产出能拍、能发的真实内容，并让人看到就买得到。</p>
+  <div class="grid g2" id="offs"></div>
+</div></section>
+
+<section id="lang" data-t="语言"><div class="w">
+  <div class="hd rv"><span class="no">06</span><h2>用本地话说</h2></div>
+  <p class="lead rv"><span data-m="hk">香港用粤语。</span><span data-m="sg">新加坡用 Singlish。</span>左右滑动看广告语草稿，上线前须由本地母语者审稿。</p>
+  <div class="sl rv" id="slHK" data-m="hk"></div>
+  <div class="sl rv" id="slSG" data-m="sg"></div>
+  <ol class="rules rv">
+    <li><div><b>本地人写，不翻译</b>粤语由港人创作者起稿，Singlish 由新加坡创作者起稿；内地团队只给卖点和合规边界。</div></li>
+    <li><div><b>俚语是调料，不是主菜</b>每条内容用一两个大家都懂的词就够，不用粗口，不夸张口音。</div></li>
+    <li><div><b>语言分层</b>短视频、配文、评论区用口语；官网、电商页、FAQ 用书面繁中和标准英文，并嵌入本地人会搜的词。</div></li>
+  </ol>
+  <div style="margin-top:10px" id="langSrc" class="rv"></div>
+</div></section>
+
+<section id="pace" data-t="节奏"><div class="w">
+  <div class="hd rv"><span class="no">07</span><h2>六个月节奏</h2></div>
+  <p class="lead rv">指标是建议起点，用第一个月的实测数据校准。</p>
+  <div class="tl">
+    <div class="ph rv"><small>第 1–4 周</small><h3>测试</h3><p>八个模板两种语言小量测试；每地先签 10 家咖啡馆；建搜索词表和 FAQ 页。</p><div class="goal">留下 2 个高完播率模板，完成第一次 AI 搜索基线。</div></div>
+    <div class="ph rv"><small>第 2–3 个月</small><h3>放大</h3><p>达人扩到每地 50–100 个；咖啡馆扩到 30–50 家；第三方评测铺量。</p><div class="goal">每地月播放 500 万以上，本地 UGC 每月新增 200 条以上。</div></div>
+    <div class="ph rv"><small>第 4–6 个月</small><h3>沉淀</h3><p>代言人内容加限定包装带动 UGC；本地 IP 联名；重点搜索词抢前三。</p><div class="goal">AI 搜索 30 问中提及率 30% 以上，重点门店动销提升。</div></div>
+  </div>
+</div></section>
+
+<section id="risk" data-t="红线"><div class="w">
+  <div class="hd rv"><span class="no">08</span><h2>投放前先过七条</h2></div>
+  <div class="grid g2" id="reds"></div>
+</div></section>
+
+<section id="source" data-t="来源"><div class="w">
+  <div class="hd rv"><span class="no">09</span><h2>信息来源与局限</h2></div>
+  <p class="lead rv">建议打法是基于下列来源的推断。对标效果多来自咨询公司和行业媒体的自述，不是品牌财报。</p>
+  <ul class="srcs rv" id="srcs"></ul>
+  <div class="note rv"><b>没覆盖到的：</b>Facebook、连登实际声量、付费份额报告未调研。小红书调研 178 篇中港新本地作者仅约 5 篇。香港竞品价格来自一年前的 JETRO 调查，对外比价前请同日同店重新采价。</div>
+  <div class="note rv"><b>关于内地报告：</b>标有“内地”的来源讲的是内地市场，人群、场景和渠道结论搬到港新属于推断，需要小量测试验证。其中小红书非商业笔记占比来自第三方转引，原始数据未能直接核实。</div>
+  <div class="note rv"><b>关于视觉：</b>本页配色依据品牌咨询方行舟的公开文章，悦鲜活品牌色为“鲜草绿”和“暗夜黑”，图形为奶牛纹和奶滴，包装突出 0.09 数字。文章没有给出色值，本页色值是按描述取的近似值，拿到 VI 规范后可替换。</div>
+</div></section>
+
+</main>
+
+<footer><div class="w">
+  <p><b>内部参考，请勿外传。</b>本页含内部售价与营销策略。整理日期 2026-11-11。品牌和代理商自述的数字未经独立核实；比较性宣称和广告语草稿在对外使用前需经法务和本地母语者审核。</p>
+</div></footer>
+
+<noscript><p style="padding:20px">本页需要开启 JavaScript 才能显示完整内容。</p></noscript>
+
+<script>
+(function(){
+document.documentElement.className+=" js";
+var $=function(i){return document.getElementById(i)};
+
+/* ---------- 来源 ---------- */
+var S={
+ price:["内部售价（顺成提供）","","内部"],
+ xhs:["小红书调研 178 篇（团队整理）","","内部"],
+ jetro:["JETRO 香港乳制品零售调查","https://www.jetro.go.jp/ext_images/agriportal/platform/hk/2025/pf_hkg_09.pdf","机构报告"],
+ yotsuba:["FairPrice 四叶北海道奶售价","https://www.fairprice.com.sg/product/yotsuba-pasteurised-milk-1l-13174592","零售"],
+ hwn:["海外网 君乐宝生乳指标（2021）","https://m.haiwainet.cn/middle/3541083/2021/0508/content_32087550_1.html","新闻"],
+ eu:["欧盟 853/2004 生乳标准","https://inspection.canada.ca/en/exporting-food-plants-animals/food-exports/requirements-library/eu-milk-and-dairy-products","监管"],
+ whk:["Weekend HK 网民评价","https://www.weekendhk.com/%E6%96%B0%E5%93%81%E9%80%9F%E9%81%9E/%E6%82%85%E9%AE%AE%E6%B4%BB-%E9%AE%AE%E5%A5%B6-%E8%B6%85%E5%B8%82-aplt2-2606129/","港媒"],
+ lemon8:["Lemon8 新加坡 13 款牛奶盲测","https://www.lemon8-app.com/@sunsetwestcc/7306020801185137154?region=sg","社媒"],
+ hkcd:["香港商报 香港上市与网点","https://www.hkcd.com.hk/content_app/2025-05/19/content_8695431.html","新闻"],
+ fourA:["4A 广告网 周杰伦歌词瓶","https://www.4anet.com/p/01kb4raq8fvm5md1rjteew5p8a","行业媒体"],
+ tmo:["TMO Group：Skintific 东南亚增长","https://www.tmogroup.asia/?p=88190","咨询公司"],
+ cube:["Cube Asia：东南亚护肤挑战者","https://cube.asia/skincare-in-southeast-asia-how-challenger-brands-are-elevating-mass-beauty-by-delivering-quality-at-affordable-prices/","咨询公司"],
+ gq:["Green Queen：Oatly 进 73 家 Pacific Coffee","https://greenqueen.com.hk/?p=29053","港媒"],
+ edel:["Edelman：Oatly 香港造新字案例","https://www.edelman.com/work/oatly-new-word","代理商案例"],
+ ckgsb:["CKGSB：Oatly 一城一渠道一产品","https://english.ckgsb.edu.cn/knowledge/article/unleashing-innovation-in-china-series-milking-it-for-all-its-worth-oatlys-china-market-entry-strategy/","商学院"],
+ chagee:["Marketing-Interactive：霸王茶姬内容生态","https://www.marketing-interactive.com/content360-how-chagee-replaces-traditional-media-with-content-ecosystems","行业媒体"],
+ luckin:["Marketing-Interactive：瑞幸马来西亚","https://www.marketing-interactive.com/how-luckin-coffee-is-brewing-a-sense-of-belonging-in-malaysia","行业媒体"],
+ luckinsg:["Food Business MEA：瑞幸新加坡百店","https://www.foodbusinessmea.com/luckin-coffee-opens-100th-singapore-store/","行业媒体"],
+ pop:["KrASIA：泡泡玛特泰国","https://kr-asia.com/pop-marts-labubu-breaks-records-in-thailand-can-the-trend-go-global","行业媒体"],
+ meiji:["Marketing-Interactive：CP-Meiji 拍小票积分","https://www.marketing-interactive.com/how-cp-meiji-turned-a-national-health-push-into-a-million-bottle-hit","品牌案例稿"],
+ ser:["SE Ranking：GEO / AEO 案例汇总","https://seranking.com/blog/top-aeo-case-studies/","服务商"],
+ cdc:["Marketing-Interactive：大家乐 × JFFT 粤语谐音梗","https://www.marketing-interactive.com/cafe-de-coral-and-jfft-cook-up-viral-wordplay-for-baked-rice-series","行业媒体"],
+ nus:["NUS：Singlish 作为营销工具","https://fass.nus.edu.sg/srn/2021/04/29/selling-singlish-using-colloquial-singapore-english-cse-as-a-marketing-tool/","高校"],
+ fifa:["ContentGrip：FIFA 的 Singlish TikTok","https://contentgrip.com/fifa-singlish-in-tiktok-video","行业媒体"],
+ hash:["Hashmeta：Singlish 分层用法","https://hashmeta.com/blog/singlish-in-marketing-when-and-how-to-use-local-language-effectively","服务商"],
+ subway:["Marketing-Interactive：Subway 反例（2013）","https://www.marketing-interactive.com/speak-good-singlish-can","行业媒体"],
+ huxiu:["虎嗅：香港抽检事件","https://www.huxiu.com/article/4887788.html","新闻"],
+ ffs:["经济参考网：高端鲜奶市占 24.0%（弗若斯特沙利文，引自招股书）","http://jjckb.xinhuanet.com/20260317/bebdeaef0e8e46a8b87b6e960785201a/c.html","新闻 · 内地"],
+ meihua:["梅花网：茶饮店用悦鲜活做奶底","https://www.meihua.info/article/6862800277816320","行业媒体 · 内地"],
+ kr36:["36氪 / 咖门：3 秒拿铁","https://m.36kr.com/p/3564983867603848","行业媒体 · 内地"],
+ daofa:["刀法研究所：小红书自来水与健身人群","https://zhuanlan.zhihu.com/p/25917073239","行业媒体 · 内地"],
+ ej21:["21 世纪经济报道：伊利秒鲜与价格战","https://www.21jingji.com/article/20260612/herald/6f8c1ea66e2236e746459a4db8a45e06.html","新闻 · 内地"],
+ rpzj:["乳品之家测评：19 天保质期的质疑（2021）","https://zhuanlan.zhihu.com/p/397089719","测评 · 内地"],
+ cnr:["内地消费者洞察报告 2026-11（团队整理）","","内部"],
+ vi:["行舟品牌咨询：悦鲜活品牌色与包装","https://www.sohu.com/a/877463689_406106","品牌咨询方"]
+};
+function chip(k){var s=S[k];return s[1]?'<a class="chip" href="'+s[1]+'" target="_blank" rel="noopener noreferrer">'+s[0]+'</a>':'<span class="chip in">'+s[0]+'</span>'}
+function chips(a){return a.map(chip).join("")}
+function lis(a){return "<ul>"+a.map(function(x){return "<li>"+x+"</li>"}).join("")+"</ul>"}
+function rows(d,s){return '<div class="row"><b>打法</b>'+lis(d)+'</div><div class="row"><b>来源</b><div>'+chips(s)+'</div></div>'}
+function tag(m){return m==="hk"?'<span class="tagm">香港</span>':m==="sg"?'<span class="tagm">新加坡</span>':""}
+
+/* ---------- 01 证据 ---------- */
+var PROOF=[
+ {n:"清甜",u:"无奶腥",h:"口感",p:"“好口感”指清甜、无腥、好入口，不是浓郁。说“浓”会在日本奶面前被拆穿。",s:["xhs","whk"]},
+ {m:"hk",n:"2.42",u:"港元 / 100ml",h:"更值得",p:"日本奶每 100ml 约 3.35–4.90 港元，悦鲜活大约便宜三成到一半。",s:["price","jetro"]},
+ {m:"sg",n:"−34%",u:"对比北海道四叶",h:"更值得",p:"每 100ml 约 0.455 新元，四叶约 0.687 新元。只和日本奶比价，不和本地奶比。",s:["price","yotsuba"]},
+ {n:"<2万",u:"菌落 CFU/mL",h:"更新鲜、信得过",p:"奶源优于欧盟标准（欧盟上限 10 万）。数字来自 2021 年报道，公布前请品牌方给近一年检测报告。",s:["hwn","eu"]}
+];
+$("proof").innerHTML=PROOF.map(function(x){return '<div class="pf rv"'+(x.m?' data-m="'+x.m+'"':'')+'><span class="n">'+x.n+'<small>'+x.u+'</small></span><h4>'+x.h+'</h4><p>'+x.p+'</p>'+chips(x.s)+'</div>'}).join("");
+
+$("backSrc").innerHTML=chips(["ffs","meihua","cnr"]);
+/* ---------- 02 引擎 ---------- */
+var ENG=[
+ {t:"短视频批量内容",role:"引擎一 · 起量",h:"一个硬卖点，用几百个人的嘴重复说",say:"先定脚本模板，再放给达人矩阵复制。",d:["每地 3–5 个头部带认知，50–100 个中小达人和咖啡师带信任","以联盟佣金和按播放加成付费，不一口价","表现好的达人视频再买投放放大"],k:[["30–50","条 / 周 / 每地"],["2","个模板留下加量"]],s:["tmo","cube"]},
+ {t:"搜索 SEO + GEO",role:"引擎二 · 被问到时出现",h:"有人问“邊隻鮮奶好飲”，答案里要有悦鲜活",say:"目标是 Google 和 ChatGPT、Gemini 这类 AI 的回答。",d:["粤语、繁中、英文各整理 50–100 个真实搜索词","官网做“鲜奶怎么选”“哪种奶适合拉花”等 FAQ 和对比表","在第三方平台留评测，AI 更信第三方","每月用固定 30 个问题测一次提及率"],k:[["30","个固定问题 / 月"]],s:["ser"]},
+ {t:"咖啡与便利店入口",role:"引擎三 · 看到就买得到",h:"先占咖啡杯，再占冷柜",say:"咖啡是悦鲜活最强的口碑资产，咖啡师是最可信的达人。",d:["每地先拿 30–50 家独立精品咖啡馆","货架牌用和短视频同一句本地广告语","投放先压在铺货充足的区域"],k:[["30–50","家咖啡馆 / 每地"],["1,500+","香港网点"]],s:["gq","ckgsb","hkcd","xhs"]}
+];
+function tabs(tid,pid,data,render){
+  var T=$(tid),P=$(pid);
+  T.innerHTML=data.map(function(x,i){return '<button type="button" role="tab" aria-selected="'+(i===0)+'" data-i="'+i+'">'+x.t+'</button>'}).join("");
+  function show(i){P.innerHTML='<div class="panel">'+render(data[i])+'</div>';
+    [].forEach.call(T.children,function(b,j){b.setAttribute("aria-selected",j===i)})}
+  T.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;show(+b.getAttribute("data-i"));
+    if(b.scrollIntoView)try{b.scrollIntoView({inline:"center",block:"nearest",behavior:"smooth"})}catch(_){}} );
+  show(0);
+}
+function panel(x){
+  return '<span class="role">'+x.role+'</span><h3>'+x.h+'</h3><p class="say">'+x.say+'</p>'+
+   (x.c?'<div class="row"><b>内容</b>'+lis(x.c)+'</div>':'')+
+   (x.k?'<div class="kpi">'+x.k.map(function(k){return '<span><b>'+k[0]+'</b>'+k[1]+'</span>'}).join("")+'</div>':'')+rows(x.d,x.s);
+}
+tabs("engTabs","engPanel",ENG,panel);
+
+$("bms").innerHTML=
+ '<div class="bm dark rv"><small>主对标 · 怎么批量起量</small><h3>Skintific</h3><p>对标高价大牌，用可验证的硬指标证明不输，再用价格收口。预算压在达人、联盟分销和直播，不打硬广。</p><span class="n">8 亿元+<small>约两年东南亚累计销售额（咨询公司口径）</small></span><div style="margin-top:8px">'+chips(["tmo","cube"])+'</div></div>'+
+ '<div class="bm rv"><small>主对标 · 怎么讲成新品类</small><h3>Oatly 香港</h3><p>先 B 后 C：先进咖啡馆，周末在店里做盲测，再造一个专属说法让货架和媒体都用。</p><span class="n">73 家<small>2018 年首批进入的 Pacific Coffee 门店</small></span><div style="margin-top:8px">'+chips(["gq","edel"])+'</div></div>';
+
+/* ---------- 03 测评 ---------- */
+var REV=[
+ {h:"盲测对决",say:"路人或咖啡师盲喝悦鲜活和日本奶，最后揭晓价格。证明“日本奶级口感，更值得”。",d:["每月固定一条，结尾统一用“揭价”镜头","同一脚本放给中小达人复制","先留存盲测记录，作为比较性宣称的依据"],s:["xhs","lemon8","gq"]},
+ {h:"咖啡师拉花",say:"同一杯拿铁，换奶前后的奶泡和口感。咖啡是口碑最强的场景。",d:["由合作咖啡馆的咖啡师出镜","固定一个“倒奶入咖啡”的慢镜头加音效，方便大家拍同款"],s:["xhs","whk","ckgsb"]},
+ {h:"每 100ml 比价",say:"把价格换算成每 100ml，在货架前实拍对比。",d:['<span data-m="hk">香港只和日本奶比：2.42 对 3.35–4.90 港元</span><span data-m="sg">新加坡只和四叶比：0.455 对 0.687 新元</span>',"发布前同日同店重新采价","评论区会自动变成比价现场，安排人回复"],s:["price","jetro","yotsuba","xhs"]},
+ {h:"硬指标解读",say:"一个数字一条视频：菌落数、体细胞数对比欧盟标准。",d:["把指标做成专属名词，像 Skintific 讲成分那样反复讲","硬指标用书面繁中和标准英文，不用俚语","先拿到近一年牧场均值和第三方报告再发"],s:["hwn","eu","tmo"]},
+ {h:"0 乳糖亲测",say:"乳糖不耐的人亲自试喝。0 乳糖款是口碑最硬的单品。",d:["找本身乳糖不耐的达人，讲真实体验","也适合健身后补给的场景，内地投放验证过健身减脂人群","只用在 0 乳糖这一款上，不和 A2 混讲",'<span data-m="hk">日本无乳糖鲜奶未在港销售，可单独推</span><span data-m="sg">请注册营养师讲清 0 乳糖和 A2 的区别</span>'],s:["xhs","jetro","meiji","daofa"]},
+ {h:"本地配方",say:'<span data-m="hk">丝袜奶茶、冻柠茶走奶、早餐麦片。</span><span data-m="sg">Kopi、teh、Milo 加鲜奶。</span>用本地口味证明清甜无腥。',d:["由本地创作者起稿","零成本、可复刻的教程最容易带出 UGC"],s:["luckin","luckinsg","xhs"]},
+ {cn:1,h:"3 秒拿铁",say:"便利店买一瓶奶，倒进咖啡液，摇一摇就喝。内地便利店已经自发走红。",d:["15–30 秒“便利店挑战”：买奶、倒咖啡液、摇、第一口的表情","图文版给出不同咖啡液和茶底的搭配公式","港新便利店是否同时有咖啡液在售，要先实地确认"],s:["kr36","cnr"]},
+ {cn:1,h:"奶茶店同款奶底",say:"内地的蜜雪冰城、古茗等用悦鲜活做奶底，网友自己在家复刻。",d:["教程类内容：在家几块钱复刻一杯店里的奶茶或拿铁","用足量倒奶的特写，回应“是不是只加了几滴”的质疑","先确认港新当地有没有连锁在用，没有就只做“在家复刻”"],s:["meihua","cnr"]}
+];
+function dim(x,i,pre){return '<details class="dim rv"'+(x.m?' data-m="'+x.m+'"':'')+(i===0?' open':'')+'><summary><span class="ix">'+pre+'</span><h3>'+x.h+tag(x.m)+(x.cn?'<span class="tagm cn">内地已验证，港新待测</span>':'')+'</h3><span class="pm" aria-hidden="true"></span><p class="say">'+x.say+'</p></summary><div class="bd">'+rows(x.d,x.s)+'</div></details>'}
+$("reviews").innerHTML=REV.map(function(x,i){return dim(x,i,"模板 ")}).join("");
+
+/* ---------- 04 平台 ---------- */
+var HK=[
+ {t:"Instagram",role:"主阵地 · 认知",h:"Reels 做盲测和咖啡",say:"香港视觉内容的主场。",c:["盲测对决、咖啡师拉花","合作咖啡馆探店"],d:["3–5 个头部达人带认知，中小达人和咖啡师复制同一脚本","留下数据最好的两条买投放"],s:["tmo","chagee"]},
+ {t:"Threads",role:"话题 · 玩梗",h:"粤语短帖接热梗",say:"文字为主，适合讨论和谐音梗。",c:["“邊隻鮮奶好飲”类提问帖","接当周网络热梗"],d:["找港人创作者起稿，不翻译内地脚本","选自己的词，“勁鮮”已被大家乐用过"],s:["cdc","xhs"]},
+ {t:"YouTube Shorts",role:"长尾 · 可搜索",h:"把测评做成能被搜到的答案",say:"视频会长期出现在搜索结果里。",c:["盲测完整版","硬指标解读、每 100ml 比价"],d:["标题写进本地人会搜的词，如“鮮奶推介”","每条视频配一篇文字版发博客"],s:["ser"]},
+ {t:"小红书",role:"港漂 · 留学生 · 游客",h:"便利店顺手买和咖啡教程",say:"现有 178 篇笔记里港新本地作者只有约 5 篇，缺的是本地声音。",c:["7 仔顺手买、空瓶做冰拿铁","价格情报帖"],d:["补本地作者，每月固定供稿","轻投放、重自来水：内地近 99% 是非商业笔记，优先腰部素人和教程类","评论区的比价和买不到的反馈要有人回"],s:["xhs","daofa"]},
+ {t:"OpenRice · 连登 · 本地媒体",role:"第三方留痕",h:"让别人替你说",say:"AI 搜索更信第三方平台的内容。",c:["咖啡馆评价里出现“用悦鲜活鲜奶”","本地生活媒体的鲜奶评测"],d:["合作咖啡馆把用奶写进菜单和店铺页","向本地媒体提供盲测素材"],s:["ser","whk"]},
+ {t:"Google 与 AI 搜索",role:"搜索",h:"占住问题词",say:"人们会直接问 AI 哪款鲜奶好。",c:["FAQ：鲜奶怎么选、哪款适合拉花","对比表：菌落数、保质期、哪里买"],d:["整理 50–100 个粤语和繁中搜索词","每月用固定 30 个问题测一次"],s:["ser"]}
+];
+var SG=[
+ {t:"TikTok",role:"主阵地 · 起量",h:"盲测加 Singlish 配文",say:"新加坡短视频的主场。",c:["盲测对决，对标四叶","Kopi、Milo 本地配方"],d:["画面通用，只换配文和口播，低成本批量本地化","中小达人用联盟佣金按效果付费"],s:["tmo","fifa","lemon8"]},
+ {t:"Instagram",role:"生活方式",h:"Reels 加运动社群",say:"把鲜奶和健康生活方式绑定。",c:["咖啡馆合作内容","跑团、普拉提后一杯鲜奶"],d:["用社群活动产出真实内容，不买曝光","健身博主做“练后补给”，0 乳糖款切入","和 TikTok 分开做，不一稿多发"],s:["chagee","luckin","daofa"]},
+ {t:"Lemon8",role:"图文测评",h:"长图文盲测",say:"已有 13 款牛奶盲测的先例。",c:["多品牌横评长帖","每 100ml 比价"],d:["对标四叶做结构化盲测，结论要具体","同一内容改成文字版供搜索收录"],s:["lemon8","xhs"]},
+ {t:"WhatsApp",role:"复购",h:"拍小票换积分",say:"CP-Meiji 用这一招，免下载 App。",c:["小票积分、试饮券","新品和补货提醒"],d:["冷柜和瓶身放二维码引导","用积分留住看价格的人"],s:["meiji"]},
+ {t:"HardwareZone · Reddit · 本地媒体",role:"第三方留痕",h:"让别人替你说",say:"AI 搜索更信第三方平台的内容。",c:["论坛里的真实试喝反馈","SethLui、TheSmartLocal 类评测"],d:["向本地媒体提供盲测素材","硬指标用标准英文，方便被引用"],s:["ser","hash"]},
+ {t:"Google 与 AI 搜索",role:"搜索",h:"占住问题词",say:"人们会直接问 AI 哪款鲜奶好。",c:["FAQ：best fresh milk Singapore","lactose free milk for coffee"],d:["整理 50–100 个英文搜索词","每月用固定 30 个问题测一次"],s:["ser"]}
+];
+tabs("hkTabs","hkPanel",HK,panel);
+tabs("sgTabs","sgPanel",SG,panel);
+
+/* ---------- 05 线下 ---------- */
+var OFF=[
+ {h:"精品咖啡馆",say:"菜单上写“用悦鲜活鲜奶”，咖啡师拍内容。",d:["每地先签 10 家，再扩到 30–50 家","提供供货价和菜单物料","一个城市、一个渠道、一个产品"],s:["gq","ckgsb"]},
+ {h:"店内盲测试饮",say:"周末在咖啡馆或超市摆盲测，现场拍成短视频。",d:["和日本奶同台盲喝，再揭价","试饮当作“首杯”，配首次购买优惠"],s:["gq","luckin"]},
+ {h:"冷柜与货架牌",say:"货架上的那句话，要和短视频里是同一句。",d:["写清本地广告语和每 100ml 价格","生产日期放在显眼位置","先补齐铺货不均的网点，再加大投放"],s:["hkcd","xhs"]},
+ {m:"sg",h:"运动社群活动",say:"跑团、普拉提、健身房，运动后一杯鲜奶。",d:["小规模多场次，目的是产出真实内容","参与者自己发帖，品牌少发声"],s:["chagee"]},
+ {m:"hk",h:"便利店通勤场景",say:"经过 7 仔顺手拿一支，鲜奶也可以很方便。",d:["便利店物料配通勤场景短视频","投放集中在铺货充足的区域"],s:["hkcd","xhs"]},
+ {h:"限定瓶与代言人",say:"周杰伦歌词瓶的彩蛋是用户自己发现的，比广告可信。",d:["给粉丝设计一个能跟着做的动作，如同款早餐、集瓶","明星点火只是开始，要有让人反复发帖的理由"],s:["fourA","pop","xhs"]}
+];
+$("offs").innerHTML=OFF.map(function(x,i){return dim(x,i,"线下 ")}).join("");
+
+/* ---------- 06 广告语 ---------- */
+var SL={hk:[
+ ["日本奶嘅口感，唔使日本奶嘅價錢。","日本奶级口感，更值得","主广告语、货架牌"],
+ ["飲落清清甜甜，一啲奶腥味都冇。","清甜无腥","盲测短视频标题"],
+ ["朝早一杯 latte，奶唔夠鮮唔使飲。","咖啡场景","咖啡师内容"],
+ ["冇乳糖都咁好飲？真係冇講笑。","0 乳糖","乳糖不耐人群内容"],
+ ["經過 7 仔順手抓支，鮮奶都可以咁方便。","便利店可得","便利店物料、通勤场景"]],
+ sg:[
+ ["Japan milk taste, not Japan milk price. Steady lah!","日本奶级口感，更值得","主广告语"],
+ ["No milky smell one. Try lah, confirm you like.","清甜无腥","盲测、试饮活动"],
+ ["Kopi also can, latte also can. Fresh milk mah.","咖啡场景，含本地 kopi","咖啡店合作、短视频"],
+ ["Lactose-free but still so smooth, shiok sia.","0 乳糖","社媒配文"],
+ ["Fresh milk, no need atas price.","比进口奶更值得","价格对比内容"]]};
+function sl(a){return a.map(function(x){return '<div class="slc"><q>'+x[0]+'</q><div><b>'+x[1]+'</b>用在：'+x[2]+'</div></div>'}).join("")}
+$("slHK").innerHTML=sl(SL.hk);$("slSG").innerHTML=sl(SL.sg);
+$("langSrc").innerHTML=chips(["cdc","edel","nus","fifa","hash","subway"]);
+
+/* ---------- 08 红线 ---------- */
+var RED=[
+ ["比较性宣称要有依据","“日本奶口感”“优于欧盟标准”发布前要有盲测记录或第三方检测。<b>0 乳糖只用在对应那一款。</b>"],
+ ["内容不要跑在铺货前面","香港铺货不均，看到买不到会变成负口碑。<b>投放先压在铺货好的区域。</b>"],
+ ["冷链和效期","批量达人会放大任何一次变质事件。<b>提前备好舆情回应，抽查便利店冷柜和临期。</b>"],
+ ["菌落话题先想好怎么答","2026 年 8 月香港食安中心通报过一批君乐宝常温奶菌落超标。<b>香港侧多讲体细胞数和自有牧场。</b>"],
+ ["19 天保质期会被问","内地有人认为 19 天不够新鲜，港新习惯短保鲜奶的人也可能这样想。<b>准备一条科普：配料表只有生牛乳，0.09 秒杀菌加隔氧灌装；对囤奶的家庭，耐放是优点。</b>"],
+ ["不拼营养数字和工艺参数","蛋白 3.6g 在高端奶里不突出，伊利秒鲜在内地已把 0.09 秒和 19 天全部复刻。<b>测评只比口感风格和价格，不贬损竞品。</b>"],
+ ["本地语言别用过头","俚语太多会拉低高端感，夸张口音会惹反感。<b>所有文案上线前由本地人审稿。</b>"]
+];
+$("reds").innerHTML=RED.map(function(x){return '<div class="red rv"><h3>'+x[0]+'</h3><p>'+x[1]+'</p></div>'}).join("")+'<div class="rv" style="align-self:center">'+chips(["xhs","huxiu","hkcd","rpzj","ej21","subway"])+'</div>';
+
+/* ---------- 09 来源 ---------- */
+$("srcs").innerHTML=Object.keys(S).map(function(k){var s=S[k];return '<li>'+(s[1]?'<a href="'+s[1]+'" target="_blank" rel="noopener noreferrer">'+s[0]+'</a>':'<b>'+s[0]+'</b>')+'<small>'+s[2]+'</small></li>'}).join("");
+
+/* ---------- 章节导航、市场切换、滚动 ---------- */
+var secs=[].slice.call(document.querySelectorAll("main section")),chs=$("chs");
+chs.innerHTML=secs.map(function(s){return '<a href="#'+s.id+'" data-id="'+s.id+'">'+s.getAttribute("data-t")+'</a>'}).join("");
+var links=[].slice.call(chs.children),prog=$("prog"),cur="";
+function onScroll(){
+  var h=document.documentElement,st=window.pageYOffset||h.scrollTop,p=st/((h.scrollHeight-window.innerHeight)||1);
+  prog.style.transform="scaleX("+Math.max(0,Math.min(1,p))+")";
+  var id=secs[0].id;secs.forEach(function(s){if(s.getBoundingClientRect().top<130)id=s.id});
+  if(id!==cur){cur=id;links.forEach(function(a){var on=a.getAttribute("data-id")===id;a.className=on?"on":"";
+    if(on)chs.scrollLeft=a.offsetLeft-chs.clientWidth/2+a.clientWidth/2})}
+}
+window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+
+var mk=document.querySelector(".mk");
+function setMk(k){document.body.setAttribute("data-mk",k);
+  [].forEach.call(mk.children,function(b){b.setAttribute("aria-pressed",b.getAttribute("data-k")===k)});
+  try{localStorage.setItem("yxh-mk",k)}catch(_){}
+  reveal()}
+mk.addEventListener("click",function(e){var b=e.target.closest("button");if(b)setMk(b.getAttribute("data-k"))});
+try{var sv=localStorage.getItem("yxh-mk");if(sv==="sg")setMk("sg")}catch(_){}
+
+/* 进场动效：失败时全部直接显示 */
+var io=null;
+function reveal(){
+  var els=document.querySelectorAll(".rv:not(.in)");
+  if(!("IntersectionObserver" in window)){[].forEach.call(els,function(e){e.className+=" in"});return}
+  if(!io)io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}})},{rootMargin:"0px 0px -8% 0px"});
+  [].forEach.call(els,function(e){io.observe(e)});
+}
+reveal();
+})();
+</script>
+</body>
+</html>
