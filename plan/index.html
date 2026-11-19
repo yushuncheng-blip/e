@@ -79,104 +79,202 @@ section{padding:44px 0 4px;scroll-margin-top:54px}
 .ki .s{font-size:11px;font-weight:700;color:var(--grass-d);white-space:nowrap}
 .src{display:grid;gap:8px}@media(min-width:720px){.src{grid-template-columns:repeat(4,1fr)}}
 .src div{background:var(--grass-s);border-radius:12px;padding:10px 12px;font-size:13px}.src b{display:block;font-size:14px}
+.tbl{width:100%;border-collapse:collapse;font-size:13.5px}
+.tbl th{text-align:left;font-size:12px;color:var(--grass-d);padding:8px 6px;border-bottom:1.5px solid var(--ink);white-space:nowrap}
+.tbl td{padding:9px 6px;border-bottom:1px dashed var(--line);vertical-align:top}
+.tbl td:first-child{font-weight:800;white-space:nowrap}
+@media(max-width:600px){.tbl tr:first-child{display:none}.tbl tr{display:block;padding:10px 0;border-bottom:1px dashed var(--line)}.tbl tr:last-child{border:0}.tbl td{display:block;border:0;padding:2px 0}.tbl td:first-child{font-size:16px}.tbl td:nth-child(3){font-size:12.5px;color:var(--ink2)}}
+.ok{font-size:11px;font-weight:700;border-radius:4px;padding:1px 6px;background:var(--grass-s);color:var(--grass-d);white-space:nowrap}
+.wait{font-size:11px;font-weight:700;border-radius:4px;padding:1px 6px;background:var(--warn-s);color:var(--warn);white-space:nowrap}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.cog{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center;margin:4px 0 12px}
+.cog div{border:1.5px solid var(--ink);border-radius:var(--r);padding:12px;font-size:14px;background:var(--card)}
+.cog div small{display:block;font-size:11px;letter-spacing:.1em;color:var(--ink2)}
+.cog div.to{background:var(--ink);color:#fff}.cog div.to small{color:#cfe8c8}
+.cog i{font-style:normal;font-weight:900;color:var(--grass-d);font-size:20px}
+.mk2{display:flex;gap:6px;margin:4px 0 10px}
+.mk2 button{font-size:13px;font-weight:800;padding:6px 14px;border-radius:999px;border:1.5px solid var(--ink);background:var(--card)}
+.mk2 button[aria-pressed=true]{background:var(--grass);border-color:var(--grass);color:#fff}
+.pf{background:var(--card);border:1.5px solid var(--ink);border-radius:var(--r);padding:14px 16px;margin-bottom:10px}
+.pf .t{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.pf h3{font-size:17px;font-weight:900}.pf .t span{font-size:12px;color:var(--ink2);text-align:right}
+.sb{display:flex;height:22px;border-radius:6px;overflow:hidden;margin:10px 0 4px}
+.sb i{display:block;height:100%;font-style:normal;font-size:11px;font-weight:700;color:#fff;text-align:center;line-height:22px;overflow:hidden;white-space:nowrap}
+.sb i:nth-child(1){background:#8BE077;color:var(--ink)}.sb i:nth-child(2){background:var(--grass)}.sb i:nth-child(3){background:var(--grass-d)}.sb i:nth-child(4){background:var(--ink)}
+.lg{display:flex;gap:10px;flex-wrap:wrap;font-size:11.5px;color:var(--ink2);margin-bottom:10px}
+.lg span::before{content:"";display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:-1px;background:var(--c)}
+.pf .fit{font-size:13.5px;margin-top:6px}.pf .fit b{color:var(--grass-d)}
+.pf.no{border-style:dashed;opacity:.85}
+.pf .src2{font-size:11.5px;color:var(--ink2);margin-top:6px}
+.mech{display:grid;gap:8px}@media(min-width:720px){.mech{grid-template-columns:repeat(4,1fr)}}
+.mech div{border:1.5px solid var(--ink);border-radius:var(--r);padding:12px;background:var(--card);font-size:13.5px}
+.mech b{display:block;font-size:16px;font-weight:900}.mech small{display:block;color:var(--grass-d);font-weight:700;font-size:12px;margin-bottom:4px}
+.cta{background:var(--ink);color:#fff;border-radius:var(--r);padding:16px;margin-bottom:10px}
+.cta small{font-size:11px;letter-spacing:.14em;opacity:.7}.cta p{font-size:17px;font-weight:800;margin-top:4px}
+.cta .ch{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.cta .ch span{border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:2px 10px;font-size:12.5px}
+.play{counter-reset:pl}.play .card{position:relative;padding-left:52px;margin-bottom:10px}
+.play .card::before{counter-increment:pl;content:counter(pl,decimal-leading-zero);position:absolute;left:14px;top:13px;font-family:var(--fn);font-weight:700;font-size:22px;color:var(--grass)}
+.play h3{font-size:16px;font-weight:900}.play p{font-size:13.5px;color:var(--ink2);margin-top:3px}
+.play .lp{font-size:12.5px;margin-top:6px;color:var(--ink)}.play .lp b{color:var(--grass-d)}
+.tagc{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}.tagc span{font-size:12.5px;padding:2px 10px;border-radius:999px;background:var(--grass-s);color:var(--grass-d);font-weight:700}
 </style></head><body>
 <header class="top"><div class="w">
 <small>FRESHJOY · 悦鲜活港新 · AI AGENT 驱动全域营销</small>
 <h1>落地方案<br>三步走</h1>
-<p>先建载体、把数据跑起来，再批量化营销，最后用线下互动造热点。附每月任务，供市场品牌部讨论细化。</p>
-<span class="tag">讨论稿 · 2026-11-19</span>
+<p>先建载体、把数据跑起来，再批量化营销，最后用线下互动造热点。冷鲜奶卖在线下，所以每一条内容都要告诉人去哪买。供市场品牌部讨论细化。</p>
+<span class="tag">讨论稿 · 2026-11-19 更新</span>
 </div></header>
 <nav class="bar"><div class="w" id="nav">
-<a href="#why">起点</a><a href="#road">路线图</a><a href="#p1">第一步</a><a href="#p2">第二步</a><a href="#p3">第三步</a><a href="#agent">Agent 整合</a><a href="#month">月度任务</a><a href="#intake">信息入口</a><a href="#talk">待讨论</a>
+<a href="#why">起点</a><a href="#pos">定位</a><a href="#road">路线图</a><a href="#p1">第一步</a><a href="#p2">第二步</a><a href="#p3">第三步</a><a href="#play">打卡玩法</a><a href="#plat">平台账号</a><a href="#spread">传播投流</a><a href="#content">内容分工</a><a href="#buy">去哪买</a><a href="#month">月度任务</a><a href="#intake">信息入口</a><a href="#talk">待讨论</a>
 </div></nav>
 <main class="w">
 
 <section id="why"><div class="hd"><span class="no">00</span><h2>起点：线下有销量，线上没数据</h2></div>
-<p class="lead">悦鲜活在港新的销售和真实顾客都在传统线下渠道，品牌拿不到线上用户数据和口碑，也就无法判断谁在买、为什么买、喝完怎么评价。</p>
+<p class="lead">悦鲜活在港新的销售和真实顾客都在传统线下渠道，品牌拿不到线上用户数据和口碑。同时，它是冷鲜奶、保质期短，不太适合线上销售，主战场仍是线下商超和便利店。</p>
 <div class="grid g3">
 <div class="card st"><span class="n">≈21</span><p>港新本地平台上能找到的公开提及 <span class="ag">Grokbot</span></p></div>
 <div class="card st"><span class="n">5</span><p>其中一手用户评价，全部在香港 <span class="ag">Grokbot</span></p></div>
 <div class="card st"><span class="n">≈5/178</span><p>小红书相关笔记里港新本地用户的占比 <span class="ag">OpenClaw</span></p></div>
 </div>
-<p class="lead" style="margin-top:12px">数据显示，现有口碑样本太少，不足以支撑定位判断。可考虑把“先获得第一批自有用户数据”作为第一步的核心目标。</p>
+<p class="lead" style="margin-top:12px">由此推出方案的三条主线：先获得第一批自有用户数据；让海外消费者知道这瓶中国奶好在哪里；把线上声量导回线下门店。</p>
 </section>
 
-<section id="road"><div class="hd"><span class="no">01</span><h2>路线图</h2></div>
+<section id="pos"><div class="hd"><span class="no">01</span><h2>定位：为什么选悦鲜活</h2></div>
+<p class="lead">团队判断，港新消费者对中国鲜奶几乎没有认知，普遍认为日本和澳洲的奶更好。香港本地平台上的负面也集中在“内地奶”的信任问题和到期日太近 <span class="ag">Grokbot</span>。下面是可以讨论的认知目标和可讲的优势。</p>
+<div class="cog"><div><small>现在</small>中国奶？不了解，也不太放心。日本、澳洲的更好。</div><i>→</i><div class="to"><small>希望形成 · 草稿</small>新鲜、清甜、安心，楼下超市就能买到。</div></div>
+<div class="card scroll"><table class="tbl">
+<tr><th>维度</th><th>可以讲什么</th><th>现有依据</th><th>状态</th></tr>
+<tr><td>口感</td><td>清甜无腥，适合加咖啡。不宜讲“浓郁”，横评中浓郁度靠后</td><td>小红书 178 篇笔记 <span class="ag">OpenClaw</span></td><td><span class="ok">有口碑</span></td></tr>
+<tr><td>新鲜</td><td>冷鲜奶、短保、0.09 秒工艺。同类工艺已有对手在讲，需靠效期和冷链数据讲实</td><td>公开资料 <span class="ag">Claude</span></td><td><span class="wait">待品牌方数据</span></td></tr>
+<tr><td>奶源与营养</td><td>生乳菌落、体细胞指标优于欧盟标准</td><td>2021 年公开报道 <span class="ag">Claude</span></td><td><span class="wait">待最新检测报告</span></td></tr>
+<tr><td>适合人群</td><td>0 乳糖、A2 款，乳糖不耐和家庭用户</td><td>小红书口碑集中点 <span class="ag">OpenClaw</span></td><td><span class="ok">有口碑</span></td></tr>
+<tr><td>安心</td><td>港新监管检测、代言人背书、主流商超在售</td><td>港新本地平台 <span class="ag">Grokbot</span></td><td><span class="wait">待监管文件与授权</span></td></tr>
+<tr><td>价格</td><td>香港促销价与明治持平，比北海道奶便宜三成到一半；新加坡比明治贵三到五成，“更值得”在新加坡要谨慎</td><td>惠康、FairPrice 等 <span class="ag">Grokbot</span></td><td><span class="wait">待核实原价</span></td></tr>
+</table></div>
+<p class="lead" style="margin-top:10px">与日本、澳洲奶的对比，可考虑用盲测、真实口感测评等内容让消费者自己判断，不在广告里直接点名比较。具体说法需法务确认。<span class="draft">草稿</span></p>
+</section>
+
+<section id="road"><div class="hd"><span class="no">02</span><h2>路线图</h2></div>
 <p class="lead">按六个月示意，每步约两个月，实际节奏可按预算和素材到位情况调整。</p>
 <div class="road">
-<a class="ph" href="#p1"><small>第 1–2 月 · 第一步</small><h3>建载体，跑数据</h3><p>网站、账号体系、视频矩阵起号、线下扫码导流</p></a>
-<a class="ph" href="#p2"><small>第 3–4 月 · 第二步</small><h3>批量化营销</h3><p>用数据选题，AI 批量生产内容，KOC 规模化</p></a>
+<a class="ph" href="#p1"><small>第 1–2 月 · 第一步</small><h3>建载体，跑数据</h3><p>网站、港新分开的账号体系、视频矩阵起号、创意打卡玩法</p></a>
+<a class="ph" href="#p2"><small>第 3–4 月 · 第二步</small><h3>批量化营销</h3><p>达人批量种草、自有矩阵批量科普、投流放大好内容</p></a>
 <a class="ph" href="#p3"><small>第 5–6 月 · 第三步</small><h3>线下互动造热点</h3><p>打卡点、联名、挑战赛，线上线下互相放大</p></a>
 </div>
-<div class="layer"><b>贯穿全程：</b>由 Agent 整合调研、数据、内容生产与分发，用 AI 生成的内容持续教育用户。人工负责审核和品牌把关。</div>
+<div class="layer"><b>贯穿全程：</b>每条内容都带“去哪买”的 CTA；由 Agent 整合调研、数据、内容生产与分发，用 AI 生成的内容持续教育用户，人工负责审核和品牌把关。</div>
 </section>
 
-<section id="p1"><div class="hd"><span class="no">02</span><h2>第一步：建载体，把数据跑起来</h2></div>
-<p class="lead">目标是让线下顾客有一个扫码就能留下评价和反馈的地方，同时把品牌账号和视频矩阵立起来。</p>
-<div class="flow"><span>瓶贴 / 货架二维码</span><i>→</i><span>Freshjoy 网站</span><i>→</i><span>评价 · 问卷 · 投稿</span><i>→</i><span>用户数据库</span><i>→</i><span>Agent 分析</span></div>
-
+<section id="p1"><div class="hd"><span class="no">03</span><h2>第一步：建载体，把数据跑起来</h2></div>
+<p class="lead">让线下顾客有一个扫码就能留下评价和反馈的地方，同时把港新两地的账号和视频矩阵立起来，用打卡玩法调动第一批用户参与。</p>
+<div class="flow"><span>瓶贴 / 货架二维码</span><i>→</i><span>Freshjoy 网站</span><i>→</i><span>评价 · 问卷 · 打卡上传</span><i>→</i><span>用户数据库</span><i>→</i><span>Agent 分析</span></div>
 <details class="dim" open><summary><h3>Freshjoy 互动网站</h3><span class="pm"></span><p class="say">留存评价和反馈，挖掘用户行为、消费动机和产品意见</p></summary><div class="bd">
-<div class="row"><b>功能</b><ul><li>扫码打分和短评，可附照片</li><li>三问小问卷：在哪买、为什么买、怎么喝（直接喝、咖啡、给孩子等）</li><li>新鲜度反馈：购买时离到期还有几天</li><li>咖啡与食谱投稿，作为 UGC 素材池</li><li>留资换奖励（试饮券、抽奖），形成可再触达的用户名单</li></ul></div>
-<div class="row"><b>数据</b><ul><li>评价文本、评分、购买渠道与门店、饮用场景、购买动机、复购意向</li><li>Agent 按周汇总，打上动机和场景标签，回流给内容选题</li></ul></div>
-<div class="row"><b>注意</b><ul><li>需符合香港 PDPO、新加坡 PDPA，隐私政策和数据归属主体待品牌方确认</li><li>粤语繁体、英文、简体三语</li></ul></div>
+<div class="row"><b>功能</b><ul><li>扫码打分和短评，可附照片</li><li>三问小问卷：在哪买、为什么买、怎么喝</li><li>新鲜度反馈：购买时离到期还有几天</li><li>打卡作品上传，领门店可用的优惠券</li><li>门店查找：按地区查附近哪里有货</li></ul></div>
+<div class="row"><b>数据</b><ul><li>评价、评分、购买门店、饮用场景、购买动机、复购意向</li><li>Agent 按周汇总，打上动机和场景标签，回流给内容选题</li></ul></div>
+<div class="row"><b>注意</b><ul><li>需符合香港 PDPO、新加坡 PDPA，数据归属主体待品牌方确认</li><li>繁体中文、英文、简体中文三语</li></ul></div>
 </div></details>
-
-<details class="dim"><summary><h3>品牌账号运营体系</h3><span class="pm"></span><p class="say">重新梳理 Instagram 等平台的账号定位、栏目和互动流程</p></summary><div class="bd">
-<div class="row"><b>平台</b><ul><li>Instagram、Facebook：品牌主阵地，港新是否分号可讨论</li><li>TikTok、YouTube Shorts：短视频曝光</li><li>小红书：覆盖香港本地用户和内地访港人群</li></ul></div>
-<div class="row"><b>体系</b><ul><li>统一人设和视觉，按品牌 VI 执行</li><li>固定栏目：新鲜溯源、清甜口感测评、咖啡场景、0 乳糖与 A2 科普</li><li>评论和私信统一回收，进入同一个用户数据库</li><li>互动 SOP 和负面回应口径（如“内地奶”“到期日近”）</li></ul></div>
+<details class="dim"><summary><h3>港新分开的账号体系</h3><span class="pm"></span><p class="say">香港、新加坡各自本地化运营，平台按用户画像匹配，详见“平台账号”</p></summary><div class="bd">
+<div class="row"><b>香港</b><ul><li>Instagram、Facebook、小红书为主，YouTube 和 Threads 辅助</li></ul></div>
+<div class="row"><b>新加坡</b><ul><li>TikTok、Instagram、Facebook 为主，YouTube 辅助</li></ul></div>
+<div class="row"><b>体系</b><ul><li>统一 VI，各地语言和梗本地化</li><li>固定栏目：新鲜溯源、口感测评、咖啡场景、0 乳糖与 A2 科普、去哪买</li><li>评论私信统一回收进用户数据库，负面回应口径统一</li></ul></div>
 </div></details>
-
-<details class="dim"><summary><h3>视频矩阵与涨粉</h3><span class="pm"></span><p class="say">品牌主号加场景子号，加 KOC，起号阶段以真实素材为主</p></summary><div class="bd">
-<div class="row"><b>结构</b><ul><li>主号：品牌与新品信息</li><li>场景子号（可考虑）：咖啡、亲子早餐、运动健身</li><li>KOC：港新本地小达人试饮，首批小规模</li></ul></div>
-<div class="row"><b>依据</b><ul><li>小红书调研里咖啡场景和 0 乳糖是口碑最集中的点 <span class="ag">OpenClaw</span></li><li>口感被描述为“清甜无腥”而非浓郁，测评内容宜围绕这一点 <span class="ag">OpenClaw</span></li></ul></div>
-</div></details>
-
-<details class="dim"><summary><h3>曝光策略</h3><span class="pm"></span><p class="say">先把线下流量导到线上，再用小额投放测试内容</p></summary><div class="bd">
-<div class="row"><b>打法</b><ul><li>线下触点加二维码：瓶贴、冷柜、试饮台、门店海报</li><li>小预算投放测试多版内容，按数据留下表现好的方向</li><li>渠道合作：惠康、百佳、FairPrice 等店内物料与会员触达</li></ul></div>
-<div class="row"><b>观察</b><ul><li>扫码量、网站评价数、问卷完成数、粉丝增长、互动率</li><li>具体目标值建议在拿到销量和预算后与品牌方共同设定</li></ul></div>
+<details class="dim"><summary><h3>视频矩阵与涨粉</h3><span class="pm"></span><p class="say">品牌主号、科普号、首批达人，起号阶段以真实素材为主</p></summary><div class="bd">
+<div class="row"><b>结构</b><ul><li>品牌主号：品牌、新品、活动、门店信息</li><li>科普号或栏目（可考虑）：营养、工艺、喝法</li><li>首批 KOC 试饮，小规模测试内容方向</li></ul></div>
+<div class="row"><b>曝光</b><ul><li>线下触点加二维码：瓶贴、冷柜、试饮台、门店海报</li><li>小预算测试多版内容，按数据保留表现好的方向</li><li>观察扫码量、评价数、打卡数、粉丝、互动率，目标值待与品牌方共同设定</li></ul></div>
 </div></details>
 </section>
 
-<section id="p2"><div class="hd"><span class="no">03</span><h2>第二步：批量化营销</h2></div>
-<p class="lead">在第一步有了数据和账号基础后，由 Agent 把“选题、生产、分发、复盘”串成循环，规模化产出内容。</p>
-<div class="flow"><span>用户数据与评论</span><i>→</i><span>Agent 选题</span><i>→</i><span>AI 批量生成</span><i>→</i><span class="h">人工审核</span><i>→</i><span>多账号分发</span><i>→</i><span>数据回流</span></div>
-<details class="dim" open><summary><h3>批量化的几条线</h3><span class="pm"></span><p class="say">内容、达人、投放三条线同时放量</p></summary><div class="bd">
-<div class="row"><b>内容</b><ul><li>同一主题生成粤语、英文、新加坡英语等多版本</li><li>科普类：新鲜链路、工艺、0 乳糖，用品牌方原始资料做底</li><li>种草类：咖啡配方、早餐场景、真实用户评价改编</li></ul></div>
-<div class="row"><b>达人</b><ul><li>KOC 从小规模扩到批量合作，素材二次授权进入素材池</li></ul></div>
-<div class="row"><b>投放</b><ul><li>广告语多版本 A/B 测试，所有广告语为 AI 草稿，需品牌方与法务确认后使用 <span class="draft">草稿</span></li></ul></div>
-<div class="row"><b>把关</b><ul><li>宣称只用法务批准的口径，代言人素材只在授权范围内使用</li></ul></div>
-</div></details>
+<section id="p2"><div class="hd"><span class="no">04</span><h2>第二步：批量化营销</h2></div>
+<p class="lead">有了数据和账号基础后，三件事同时放量：达人批量种草，自有矩阵批量科普和信息流种草，投手把好内容持续投流放大。机制见“传播投流”和“内容分工”。</p>
+<div class="flow"><span>用户数据与评论</span><i>→</i><span>Agent 选题</span><i>→</i><span>Brief 给达人 / AI 批量生成</span><i>→</i><span class="h">人工审核</span><i>→</i><span>发布</span><i>→</i><span>投流放大</span><i>→</i><span>数据回流</span></div>
 </section>
 
-<section id="p3"><div class="hd"><span class="no">04</span><h2>第三步：线下互动，造热点</h2></div>
-<p class="lead">用线下活动制造打卡和分享理由，让线上内容和线下体验互相放大。以下为可讨论的方向，均为草稿。</p>
+<section id="p3"><div class="hd"><span class="no">05</span><h2>第三步：线下互动，造热点</h2></div>
+<p class="lead">用线下活动制造打卡和分享理由，让线上内容和线下门店互相放大。以下为可讨论的方向，均为草稿。</p>
 <div class="grid g2">
-<div class="card"><h3 style="font-size:16px">新鲜度打卡点 <span class="draft">草稿</span></h3><p style="font-size:13.5px;color:var(--ink2);margin-top:4px">在商场或渠道门店设快闪，把“从牧场到冷柜几天”做成可视化装置，拍照分享换试饮。</p></div>
+<div class="card"><h3 style="font-size:16px">新鲜度打卡点 <span class="draft">草稿</span></h3><p style="font-size:13.5px;color:var(--ink2);margin-top:4px">商场或渠道门店快闪，把“从牧场到冷柜几天”做成可视化装置，拍照分享换试饮。</p></div>
 <div class="card"><h3 style="font-size:16px">咖啡店联名 <span class="draft">草稿</span></h3><p style="font-size:13.5px;color:var(--ink2);margin-top:4px">与港新本地咖啡店合作限定饮品，承接已有的咖啡场景口碑。</p></div>
-<div class="card"><h3 style="font-size:16px">UGC 挑战赛 <span class="draft">草稿</span></h3><p style="font-size:13.5px;color:var(--ink2);margin-top:4px">以网站投稿的配方或喝法为题，线上发起、线下颁奖，优质内容进入官方账号。</p></div>
+<div class="card"><h3 style="font-size:16px">UGC 挑战赛 <span class="draft">草稿</span></h3><p style="font-size:13.5px;color:var(--ink2);margin-top:4px">以网站投稿的喝法为题，线上发起、线下颁奖，优质内容进入官方账号和投流池。</p></div>
 <div class="card"><h3 style="font-size:16px">节点营销 <span class="draft">草稿</span></h3><p style="font-size:13.5px;color:var(--ink2);margin-top:4px">结合农历新年等节点和渠道大促，做限定包装或礼盒，配合店内试饮。</p></div>
 </div>
-<p class="lead" style="margin-top:12px">病毒式传播难以预先保证，可考虑用第二步的数据先测哪类内容更容易被转发，再决定线下投入的方向。</p>
 </section>
 
-<section id="agent"><div class="hd"><span class="no">05</span><h2>Agent 整合</h2></div>
-<p class="lead">方案未来落在 Agent 整合架构上（架构名称待确认）。下面是各环节可由 Agent 承担的工作，人工保留审核和决策。</p>
-<div class="grid g2">
-<div class="card"><h3 style="font-size:15px">调研 Agent</h3><p style="font-size:13.5px;color:var(--ink2);margin-top:4px">持续抓取小红书、港新本地平台和公开网页的口碑与竞品动态。已在用：<span class="ag">OpenClaw</span><span class="ag">Grokbot</span><span class="ag">Raven</span><span class="ag">Claude</span></p></div>
-<div class="card"><h3 style="font-size:15px">数据 Agent</h3><p style="font-size:13.5px;color:var(--ink2);margin-top:4px">汇总网站评价、问卷和社媒评论，打动机与场景标签，每周出用户洞察。</p></div>
-<div class="card"><h3 style="font-size:15px">内容 Agent</h3><p style="font-size:13.5px;color:var(--ink2);margin-top:4px">按洞察出选题、脚本、图文和短视频初稿，多语言版本，送人工审核。</p></div>
-<div class="card"><h3 style="font-size:15px">分发与复盘 Agent</h3><p style="font-size:13.5px;color:var(--ink2);margin-top:4px">按账号排期发布，回收数据，标出表现好坏的内容，反馈给选题。</p></div>
+<section id="play"><div class="hd"><span class="no">06</span><h2>初期打卡玩法与互动</h2></div>
+<p class="lead">第一步就开始，用创意短视频打卡调动参与。每个玩法都设计成“线下买 → 线上发 → 网站领奖 → 回门店用”的闭环，同时积累 UGC 和用户数据。全部为草稿，需结合预算和法务意见调整。</p>
+<div class="play">
+<div class="card"><h3>冷柜打卡 <span class="draft">草稿</span></h3><p>在门店乳品冷柜找到 Freshjoy，拍一条短视频或照片，带活动标签发布。</p><p class="lp"><b>闭环：</b>上传网站领下次购买优惠券，顺带知道附近哪家店有货。</p></div>
+<div class="card"><h3>看日期挑战 <span class="draft">草稿</span></h3><p>拍下瓶身生产日期，晒“这瓶有多新鲜”。正面回应“到期日太近”的顾虑。</p><p class="lp"><b>闭环：</b>同时收集各门店的新鲜度数据，发现冷链问题。</p></div>
+<div class="card"><h3>咖啡一杯 <span class="draft">草稿</span></h3><p>用 Freshjoy 做拿铁或拉花，晒成品和配方。承接小红书里最集中的咖啡场景口碑。</p><p class="lp"><b>闭环：</b>优质配方进入官方账号，作者获得联名或试饮奖励。</p></div>
+<div class="card"><h3>盲测口感 <span class="draft">草稿</span></h3><p>朋友之间盲喝几款鲜奶，猜哪杯是 Freshjoy，说出口感感受。比较类内容需法务确认，不点名竞品。</p><p class="lp"><b>闭环：</b>测评视频作为第二步投流素材候选。</p></div>
+<div class="card"><h3>早餐 7 天 <span class="draft">草稿</span></h3><p>连续 7 天晒早餐里的一杯奶，完成可抽奖。适合家庭和亲子人群，Facebook 社群更合适。</p><p class="lp"><b>闭环：</b>连续参与者沉淀为复购和口碑核心用户。</p></div>
 </div>
 </section>
 
-<section id="month"><div class="hd"><span class="no">06</span><h2>每月任务</h2></div>
-<p class="lead">点月份查看。标橙色的是需要品牌方先提供的素材或决定。</p>
+<section id="plat"><div class="hd"><span class="no">07</span><h2>平台与账号：港新分开</h2></div>
+<p class="lead">定位是本地化，香港和新加坡账号分开。平台优先级按两地用户画像匹配。下图为 18 岁以上账号的年龄占比。</p>
+<div class="mk2" id="mk2"><button data-m="hk" aria-pressed="true">香港</button><button data-m="sg" aria-pressed="false">新加坡</button></div>
+<div class="lg"><span style="--c:#8BE077">18–24</span><span style="--c:var(--grass)">25–34</span><span style="--c:var(--grass-d)">35–44</span><span style="--c:var(--ink)">45+</span></div>
+<div id="pfs"></div>
+<p class="note" style="padding:4px 0 0">数据为广告平台可触达账号数，包含多账号和访客，可能大于人口，只适合比较平台之间的相对结构。来源：NapoleonCat 2026 年 10 月；新加坡 TikTok 为 Affect Group 2026 年 4 月引用的 TikTok Ads Manager 估算；香港 TikTok、Threads、YouTube 为 DataReportal《Digital 2026》；香港小红书为 Digital Business Lab 2026 年春季调查（548 人）。均由 <span class="ag">Claude</span> 从公开网页整理。</p>
+</section>
+
+<section id="spread"><div class="hd"><span class="no">08</span><h2>传播与投流机制</h2></div>
+<p class="lead">建立 KOL、KOC、UGC 加自有矩阵的四层传播，由投手把表现好的内容持续投流放大，形成全网曝光。</p>
+<div class="mech">
+<div><small>建立认知</small><b>KOL</b>少量头部或垂类达人，按 brief 讲清“为什么选悦鲜活”。</div>
+<div><small>批量种草</small><b>KOC</b>大量本地小达人真实试饮、测评、去哪买攻略。</div>
+<div><small>口碑沉淀</small><b>UGC</b>打卡活动带出的普通用户内容，信任度最高。</div>
+<div><small>持续输出</small><b>自有矩阵</b>港新品牌号与科普号，批量科普和信息流种草。</div>
+</div>
+<div class="flow" style="margin-top:14px"><span>全部内容进入内容池</span><i>→</i><span>自然流量测试</span><i>→</i><span>投手筛出表现好的</span><i>→</i><span>投流放大</span><i>→</i><span>持续追投或替换</span></div>
+<details class="dim" open><summary><h3>投流逻辑</h3><span class="pm"></span><p class="say">先测后投，投好内容，按门店周边定向</p></summary><div class="bd">
+<div class="row"><b>选内容</b><ul><li>自然流量下完播、互动、收藏表现好的内容进入投流池，含达人内容（需授权）</li></ul></div>
+<div class="row"><b>定向</b><ul><li>按有货门店周边地理范围定向，配合“去哪买”CTA</li><li>港新分开投放，素材和语言各自本地化</li></ul></div>
+<div class="row"><b>放大</b><ul><li>效果好持续加预算，疲劳后由 Agent 生成同主题新版本替换</li></ul></div>
+<div class="row"><b>依据</b><ul><li>香港小红书用户对内容的信任：用户内容 52.9%，达人 24.7%，品牌官方 22.4%（Digital Business Lab，2026 年春，548 人）<span class="ag">Claude</span></li></ul></div>
+</div></details>
+<p class="lead" style="margin-top:10px">可以向品牌方了解前期的传播策略和用过的达人，作为这套机制的起点。</p>
+</section>
+
+<section id="content"><div class="hd"><span class="no">09</span><h2>内容分工与标签</h2></div>
+<p class="lead">内容分两条线生产：需要真人出镜和真实体验的走 brief，规模化的科普和信息流内容由 Agent 生成。人工统一审核。</p>
+<div class="grid g2">
+<div class="card"><h3 style="font-size:16px">Brief 驱动 · 达人与用户发布</h3><ul class="row" style="display:block;border:0;margin:0;padding-top:6px"><li>KOL/KOC 合作 brief：卖点、必提信息、去哪买、禁用词</li><li>打卡和挑战赛活动规则</li><li>线下活动执行方案</li></ul></div>
+<div class="card"><h3 style="font-size:16px">Agent 驱动 · 批量生产</h3><ul class="row" style="display:block;border:0;margin:0;padding-top:6px"><li>按洞察选题、写脚本</li><li>生图、批量生成短视频，多语言版本</li><li>自动打标签、排期发布、回收数据</li></ul></div>
+</div>
+<details class="dim" style="margin-top:10px" open><summary><h3>标签体系</h3><span class="pm"></span><p class="say">对外标签帮助被搜到，对内标签帮助分析，均为草稿</p></summary><div class="bd">
+<div class="row"><b>品牌</b><div class="tagc"><span>#Freshjoy</span><span>#悦鲜活</span><span>#活动专属标签</span></div></div>
+<div class="row"><b>场景</b><div class="tagc"><span>咖啡</span><span>早餐</span><span>亲子</span><span>运动后</span><span>乳糖不耐</span></div></div>
+<div class="row"><b>地区</b><div class="tagc"><span>香港地区与商场名</span><span>新加坡社区名</span><span>渠道名</span></div></div>
+<div class="row"><b>热门</b><ul><li>各平台本地热门标签由调研 Agent 每周更新</li></ul></div>
+<div class="row"><b>对内</b><ul><li>每条内容记录主题、卖点、场景、语言、生产方式（达人/AI），用于比较哪类内容效果好</li></ul></div>
+</div></details>
+<details class="dim"><summary><h3>Agent 整合</h3><span class="pm"></span><p class="say">方案未来落在 Agent 整合架构上（架构名称待确认）</p></summary><div class="bd">
+<div class="row"><b>调研</b><ul><li>持续抓取小红书、港新本地平台和公开网页的口碑、竞品与热门标签。已在用 <span class="ag">OpenClaw</span><span class="ag">Grokbot</span><span class="ag">Raven</span><span class="ag">Claude</span></li></ul></div>
+<div class="row"><b>数据</b><ul><li>汇总网站、问卷、打卡和社媒评论，每周出用户洞察</li></ul></div>
+<div class="row"><b>内容</b><ul><li>选题、脚本、生图、生视频、多语言，送人工审核</li></ul></div>
+<div class="row"><b>分发</b><ul><li>按账号排期发布，回收数据，标出可投流的内容</li></ul></div>
+</div></details>
+</section>
+
+<section id="buy"><div class="hd"><span class="no">10</span><h2>去哪买：批量植入 CTA</h2></div>
+<p class="lead">冷鲜奶保质期短，主战场在线下。所有内容在营销的各个阶段都要回答一个问题：在哪里、什么场景能买到。</p>
+<div class="cta"><small>每条内容的固定结尾 · 草稿</small><p>在你附近的商超和便利店乳品冷柜就能找到</p>
+<div class="ch" data-m="hk"><span>惠康</span><span>百佳</span><span>7-Eleven</span><span>其他在售渠道待确认</span></div>
+<div class="ch" data-m="sg" style="display:none"><span>FairPrice</span><span>Cold Storage</span><span>昇菘</span><span>其他在售渠道待确认</span></div></div>
+<div class="grid g2">
+<div class="card"><h3 style="font-size:15px">内容里怎么植入</h3><ul class="row" style="display:block;border:0;margin:0;padding-top:6px"><li>视频结尾统一“去哪买”卡片</li><li>达人 brief 把门店和冷柜位置列为必提信息</li><li>场景化 CTA：早餐、咖啡、运动后，各配对应门店类型</li></ul></div>
+<div class="card"><h3 style="font-size:15px">工具和渠道</h3><ul class="row" style="display:block;border:0;margin:0;padding-top:6px"><li>网站门店查找，按地区显示</li><li>投流按门店周边定向</li><li>即时零售平台是否适合冷鲜奶，可讨论</li></ul></div>
+</div>
+</section>
+
+<section id="month"><div class="hd"><span class="no">11</span><h2>每月任务</h2></div>
+<p class="lead">点月份查看。橙色字是需要品牌方先提供的素材或决定。</p>
 <div class="tabs" id="tabs" role="tablist"></div>
 <div class="card mo" id="mo"></div>
 <p class="cal">若 12 月启动，第 3 月恰逢农历新年（2027 年 2 月 6 日），可把节点内容提前放进第 2 月准备。</p>
 </section>
 
-<section id="intake"><div class="hd"><span class="no">07</span><h2>信息入口：需要品牌方给的支撑</h2></div>
+<section id="intake"><div class="hd"><span class="no">12</span><h2>信息入口：需要品牌方给的支撑</h2></div>
 <p class="lead">方案要落地，需要两类信息：品牌方手里的数据，用来保证准确性；品牌已积累的素材，用来做差异化定位、科普和种草。点按钮看每一步依赖哪些。</p>
 <div class="sf" id="sf"><button data-s="0" aria-pressed="true">全部</button><button data-s="1" aria-pressed="false">第一步需要</button><button data-s="2" aria-pressed="false">第二步需要</button><button data-s="3" aria-pressed="false">第三步需要</button></div>
 <div class="card ik" id="ik"></div>
@@ -186,10 +284,10 @@ section{padding:44px 0 4px;scroll-margin-top:54px}
 <a class="lnk" href="../ask/">打开会议用素材清单（可勾选、可复制）→</a>
 </section>
 
-<section id="talk"><div class="hd"><span class="no">08</span><h2>待讨论</h2></div>
+<section id="talk"><div class="hd"><span class="no">13</span><h2>待讨论</h2></div>
 <ul class="disc">
 <li>启动月份和六个月的预算区间</li>
-<li>港新两地账号合并还是分开运营</li>
+<li>品牌方前期用过的传播策略和达人资源</li><li>与日本、澳洲奶的比较类内容能做到什么程度</li><li>冷鲜奶是否考虑即时零售渠道</li>
 <li>瓶贴加二维码是否可行，改版周期多长</li>
 <li>网站收集的用户数据归属哪个主体</li>
 <li>每个阶段的目标值由谁来定、用什么基线</li>
@@ -199,39 +297,58 @@ section{padding:44px 0 4px;scroll-margin-top:54px}
 </section>
 
 <p class="note">调研数据由 AI 智能体自主完成，未经人工干预，标签为来源：OpenClaw＝小红书，Grokbot＝港新本地平台与价格，Raven＝内地消费者洞察报告，Claude＝公开网页与汇总。本页为供市场品牌部讨论细化的框架，任务安排、活动方向和广告语均为草稿，以品牌方确认为准。</p>
+<p class="note">调研数据由 AI 智能体自主完成，未经人工干预，标签为来源：OpenClaw＝小红书，Grokbot＝港新本地平台与价格，Raven＝内地消费者洞察报告，Claude＝公开网页与汇总。本页为供市场品牌部讨论细化的框架，任务安排、活动玩法、标签和广告语均为草稿，以品牌方确认为准。</p>
 </main>
-<script>
+<script>var P={hk:[
+{n:"Instagram",u:"约 650 万账号",a:[18.1,36.9,24.2,20.8],f:"视觉和 Reels 主阵地，25–34 岁为主。适合品牌形象、KOL 合作、打卡作品。"},
+{n:"Facebook",u:"约 917 万账号",a:[13.4,32.7,24.5,29.4],f:"45 岁以上约三成，覆盖家庭和父母决策者。适合门店促销、社群、活动报名。"},
+{n:"小红书",u:"约 62% 港人使用",a:null,f:"Z 世代约九成使用，偏搜索和种草，用户内容信任度最高。适合测评、攻略、去哪买。"},
+{n:"YouTube",u:"广告可触达约 624 万",a:null,f:"覆盖最广。适合溯源科普长视频和 Shorts。"},
+{n:"Threads",u:"广告可触达约 155 万",a:null,f:"约两成人口可触达。适合话题互动，可观察后再决定投入。"},
+{n:"TikTok",u:"成人可触达约 2.6%",a:null,f:"在香港几乎无法使用，不建议作为香港主平台。",no:1}],
+sg:[
+{n:"TikTok",u:"约 375 万（18+）",a:[13.4,41.0,22.1,23.5],f:"25–34 岁占四成。适合打卡挑战、达人测评、投流放大。"},
+{n:"Instagram",u:"约 458 万账号",a:[16.6,36.0,22.8,24.6],f:"25–34 岁为主。适合品牌形象、Reels、KOL 合作。"},
+{n:"Facebook",u:"约 694 万账号",a:[13.4,33.1,23.7,29.8],f:"45 岁以上约三成。适合家庭用户、社区群组、门店促销信息。"},
+{n:"YouTube",u:"广告可触达约 533 万",a:null,f:"覆盖最广。适合科普和 Shorts。"}]};
+var pfs=document.getElementById("pfs");
+function rp(m){pfs.innerHTML=P[m].map(function(x){return '<div class="pf'+(x.no?' no':'')+'"><div class="t"><h3>'+x.n+'</h3><span>'+x.u+'</span></div>'+(x.a?'<div class="sb">'+x.a.map(function(v){return '<i style="width:'+v+'%">'+Math.round(v)+'%</i>'}).join("")+'</div>':'')+'<p class="fit"><b>适合：</b>'+x.f+'</p></div>'}).join("");
+[].forEach.call(document.querySelectorAll(".cta .ch"),function(c){c.style.display=c.dataset.m==m?"":"none"})}
+rp("hk");document.getElementById("mk2").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;[].forEach.call(this.children,function(x){x.setAttribute("aria-pressed",x==b)});rp(b.dataset.m)});
+
 var M=[
-{m:"第 1 月",s:"第一步",g:"打地基：素材到位，网站和账号设计完成",w:[
-["网站","确定功能与问卷题目，完成设计稿和三语文案","隐私政策与数据归属"],
-["账号","盘点现有账号，定人设、栏目、视觉规范和互动 SOP","现有账号清单与后台权限、VI 手册"],
-["视频","整理素材库，产出首批 10–20 条真实素材剪辑","视频与图片素材库及授权"],
-["线下","确认可放二维码的触点，设计扫码物料","瓶贴与门店物料审批流程"],
-["Agent","把调研 Agent 设为每周自动更新口碑与竞品",""]],o:"网站原型、账号规范、首批内容"},
-{m:"第 2 月",s:"第一步",g:"上线跑数据：网站开放，扫码导流开始",w:[
-["网站","上线，开放评价、问卷、投稿与留资",""],
-["账号","按栏目稳定更新，评论回收进数据库",""],
-["视频","主号起量，首批 KOC 试饮合作","KOL/KOC 合作历史与预算"],
+{m:"第 1 月",s:"第一步",g:"打地基：素材到位，网站和港新账号设计完成",w:[
+["网站","确定功能、问卷和门店查找，完成设计稿和三语文案","隐私政策与数据归属、在售门店清单"],
+["账号","盘点现有账号，港新分开开号，定人设、栏目和互动 SOP","现有账号与后台权限、VI 手册"],
+["定位","对齐优势表和认知目标，确定可对外说法","法务批准的宣称口径、检测报告"],
+["视频","整理素材库，产出首批真实素材剪辑","视频与图片素材库及授权"],
+["玩法","设计首批打卡玩法和奖励规则","奖励预算、优惠券核销方式"],
+["线下","确认可放二维码的触点，设计扫码物料","瓶贴与门店物料审批流程"]],o:"网站原型、账号规范、打卡方案、首批内容"},
+{m:"第 2 月",s:"第一步",g:"上线跑数据：网站开放，首个打卡活动启动",w:[
+["网站","上线评价、问卷、打卡上传、门店查找",""],
+["玩法","启动冷柜打卡或咖啡一杯，带去哪买 CTA",""],
+["账号","港新各自稳定更新，评论回收进数据库",""],
+["达人","首批 KOC 试饮，测试内容方向","前期合作过的达人与传播策略"],
 ["线下","二维码物料进店，试饮台引导扫码","渠道配合"],
-["Agent","数据 Agent 出第一份用户洞察周报",""]],o:"第一批自有用户评价与动机数据"},
-{m:"第 3 月",s:"第二步",g:"批量化起步：内容生产线跑通",w:[
-["内容","按洞察选题，AI 批量产出多语言内容，人工审核后分发","法务批准的宣称口径"],
-["视频","场景子号视情况开设，素材复用到多账号",""],
-["投放","小预算 A/B 测试多版内容与广告语草稿","预算"],
-["节点","农历新年内容与店内活动（若时间吻合）",""]],o:"可复制的内容生产与审核流程"},
-{m:"第 4 月",s:"第二步",g:"放量：达人和投放规模化",w:[
-["达人","KOC 批量合作，优质内容二次授权进素材池",""],
-["内容","科普系列上线：新鲜链路、工艺、0 乳糖与 A2","牧场、工厂、工艺资料"],
-["投放","保留表现好的方向，加大投放",""],
-["Agent","复盘 Agent 每周标出高低表现内容，调整选题",""]],o:"稳定的内容节奏和第一轮转化数据"},
+["Agent","数据 Agent 出第一份用户洞察周报",""]],o:"第一批自有用户数据和 UGC"},
+{m:"第 3 月",s:"第二步",g:"批量化起步：内容生产线和投流机制跑通",w:[
+["内容","Agent 按洞察批量产出科普和信息流内容，人工审核",""],
+["达人","KOC 批量合作，按 brief 植入去哪买",""],
+["投流","自然流量测试，筛出好内容按门店周边投放","投流预算"],
+["节点","农历新年内容与店内活动（若时间吻合）",""]],o:"可复制的生产、审核和投流流程"},
+{m:"第 4 月",s:"第二步",g:"放量：达人、矩阵、投流同时放大",w:[
+["内容","科普系列：新鲜链路、奶源、0 乳糖与 A2","牧场、工厂、工艺资料"],
+["达人","KOL 建立认知，KOC 扩量，达人内容授权进投流池","代言人与达人授权"],
+["投流","效果好持续加投，疲劳内容由 Agent 生成新版本替换",""],
+["Agent","复盘 Agent 每周标出高低表现内容和热门标签",""]],o:"稳定的内容节奏和第一轮转化数据"},
 {m:"第 5 月",s:"第三步",g:"线下互动：打卡点和联名落地",w:[
-["活动","快闪打卡点或渠道店内活动执行","场地与渠道资源"],
+["活动","快闪打卡点或渠道店内活动","场地与渠道资源"],
 ["联名","咖啡店联名限定饮品（若通过讨论）",""],
-["线上","打卡内容实时回流到账号，配合挑战赛预热",""]],o:"线下活动带来的线上分享和新用户"},
+["线上","打卡内容实时回流到账号并投流，挑战赛预热",""]],o:"线下活动带来的线上分享和新用户"},
 {m:"第 6 月",s:"第三步",g:"造热点：挑战赛和整体复盘",w:[
-["传播","UGC 挑战赛，优秀投稿上官方账号",""],
-["数据","半年用户数据复盘：画像、动机、口碑变化",""],
-["规划","基于数据调整定位与下半年计划，与品牌方共同设定目标",""]],o:"半年复盘报告与下一阶段方案"}];
+["传播","UGC 挑战赛，优秀作品上官方账号和投流",""],
+["数据","半年复盘：画像、动机、口碑和门店动销变化","同期销量数据"],
+["规划","调整定位与下半年计划，与品牌方共同设定目标",""]],o:"半年复盘报告与下一阶段方案"}];
 var tb=document.getElementById("tabs"),mo=document.getElementById("mo");
 tb.innerHTML=M.map(function(x,i){return '<button role="tab" data-i="'+i+'" aria-selected="'+(i==0)+'"><b>'+x.m+'</b><small>'+x.s+'</small></button>'}).join("");
 function show(i){var x=M[i];mo.innerHTML='<p class="goal">'+x.g+'</p>'+x.w.map(function(r){return '<div class="ws"><b>'+r[0]+'</b><div>'+r[1]+(r[2]?'<span class="need">需品牌方：'+r[2]+'</span>':'')+'</div></div>'}).join("")+'<p class="out"><b>本月产出：</b>'+x.o+'</p>';
