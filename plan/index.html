@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>悦鲜活落地方案</title>
+<meta name="description" content="悦鲜活（Freshjoy）港新 AI Agent 驱动全域营销三步走落地方案与月度任务，讨论稿。">
+<style>
+:root{--milk:#F7F8F2;--card:#fff;--ink:#14362A;--ink2:#55605A;--line:#E1E5DA;--grass:#3FAE2A;--grass-d:#1E7A14;--grass-s:#E7F5E1;--warn:#B4541A;--warn-s:#FBEBDD;
+--f:-apple-system,BlinkMacSystemFont,"PingFang SC","PingFang HK","Microsoft YaHei","Noto Sans CJK SC",sans-serif;--fn:"DIN Alternate","Avenir Next Condensed","Helvetica Neue",Arial,sans-serif;--r:16px;--pad:max(16px,env(safe-area-inset-left,0px))}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--milk);color:var(--ink);font-family:var(--f);font-size:15px;line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4,p,ul{margin:0;padding:0}ul{list-style:none}button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;padding:0}a{color:inherit}
+.w{max-width:900px;margin:0 auto;padding:0 var(--pad)}.n{font-family:var(--fn);font-weight:700}
+.top{background:var(--ink);color:#fff;padding:42px 0 30px;position:relative;overflow:hidden}
+.top::after{content:"";position:absolute;right:-60px;top:-50px;width:210px;height:190px;background:var(--grass);border-radius:58% 42% 63% 37%/44% 59% 41% 56%;animation:m 16s ease-in-out infinite alternate}
+@keyframes m{50%{border-radius:41% 59% 38% 62%/57% 40% 60% 43%;transform:rotate(7deg)}100%{border-radius:63% 37% 52% 48%/38% 62% 45% 55%;transform:rotate(-5deg)}}
+.top .w{position:relative;z-index:1}.top small{font-size:12px;letter-spacing:.18em;opacity:.75}
+.top h1{font-size:clamp(32px,9.5vw,52px);font-weight:900;line-height:1.12;margin-top:6px}
+.top p{opacity:.85;margin-top:10px;max-width:30em;font-size:14px}
+.tag{display:inline-block;font-size:11px;font-weight:700;border:1px solid rgba(255,255,255,.5);border-radius:999px;padding:1px 9px;margin-top:12px}
+.bar{position:sticky;top:0;z-index:9;background:rgba(247,248,242,.96);border-bottom:1.5px solid var(--ink);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.bar .w{display:flex;gap:4px;padding-top:8px;padding-bottom:8px;overflow-x:auto;scrollbar-width:none}.bar .w::-webkit-scrollbar{display:none}
+.bar a{flex:none;text-decoration:none;font-size:13px;font-weight:700;padding:6px 11px;border-radius:999px;color:var(--ink2);white-space:nowrap}
+.bar a.on{background:var(--ink);color:#fff}
+section{padding:44px 0 4px;scroll-margin-top:54px}
+.hd{display:flex;align-items:flex-end;gap:12px;margin-bottom:6px}.hd .no{font-family:var(--fn);font-weight:700;font-size:56px;line-height:.82;color:var(--grass)}
+.hd h2{font-size:clamp(23px,6.4vw,32px);font-weight:900;line-height:1.15}
+.lead{color:var(--ink2);margin-bottom:16px;font-size:14.5px;max-width:40em}
+.card{background:var(--card);border:1.5px solid var(--ink);border-radius:var(--r);padding:14px 16px}
+.grid{display:grid;gap:10px}@media(min-width:720px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}}
+.st .n{font-size:34px;line-height:1;color:var(--grass-d)}.st p{font-size:13.5px;color:var(--ink2);margin-top:4px}
+.ag{display:inline-block;font-size:11px;padding:0 7px;border-radius:999px;border:1px solid var(--line);background:var(--milk);color:var(--ink2);white-space:nowrap;vertical-align:1px}
+/* 路线图 */
+.road{display:grid;gap:10px;margin-top:4px}@media(min-width:720px){.road{grid-template-columns:repeat(3,1fr)}}
+.ph{display:block;text-decoration:none;background:var(--card);border:1.5px solid var(--ink);border-radius:var(--r);padding:14px 16px;position:relative}
+.ph small{font-family:var(--fn);font-weight:700;color:var(--grass-d);font-size:13px}.ph h3{font-size:18px;font-weight:900;margin:2px 0 4px}.ph p{font-size:13.5px;color:var(--ink2)}
+.ph.on{background:var(--grass-s)}
+.layer{margin-top:10px;background:var(--ink);color:#fff;border-radius:var(--r);padding:12px 16px;font-size:14px}
+.layer b{color:#8BE077}
+/* 阶段详情 */
+.dim{background:var(--card);border:1.5px solid var(--ink);border-radius:var(--r);overflow:hidden;margin-bottom:10px}
+.dim summary{list-style:none;display:grid;grid-template-columns:1fr auto;gap:2px 12px;align-items:center;padding:13px 16px;cursor:pointer}
+.dim summary::-webkit-details-marker{display:none}
+.dim h3{font-size:16.5px;font-weight:800;line-height:1.35}.dim .say{grid-column:1/-1;color:var(--ink2);font-size:13.5px}
+.pm{width:26px;height:26px;border-radius:50%;border:1.5px solid var(--ink);position:relative;transition:background .3s}
+.pm::before,.pm::after{content:"";position:absolute;left:50%;top:50%;width:10px;height:1.5px;background:var(--ink);margin:-.75px 0 0 -5px}
+.pm::after{transform:rotate(90deg);transition:transform .3s}.dim[open] .pm{background:var(--grass);border-color:var(--grass)}
+.dim[open] .pm::before,.dim[open] .pm::after{background:#fff}.dim[open] .pm::after{transform:rotate(0)}
+.bd{padding:0 16px 14px}
+.row{display:grid;grid-template-columns:44px 1fr;gap:10px;padding-top:10px;margin-top:10px;border-top:1px dashed var(--line);font-size:14px}
+.row>b{font-size:12px;letter-spacing:.06em;color:var(--grass-d);padding-top:2px}
+.row li{position:relative;padding-left:14px;margin:2px 0}.row li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--grass)}
+.draft{font-size:11px;font-weight:700;border-radius:4px;padding:1px 6px;margin-left:4px;background:var(--warn-s);color:var(--warn);white-space:nowrap}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:4px 0 14px}
+.flow span{background:var(--card);border:1.5px solid var(--ink);border-radius:999px;padding:4px 11px;font-size:13px;font-weight:700}
+.flow i{font-style:normal;color:var(--grass-d);font-weight:700}
+.flow span.h{background:var(--warn-s);border-color:var(--warn);color:var(--warn)}
+/* 月度 */
+.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none;border:1.5px solid var(--ink);border-radius:12px;padding:6px 12px;background:var(--card);text-align:left;line-height:1.25}
+.tabs button b{display:block;font-family:var(--fn);font-size:17px}.tabs button small{font-size:11px;color:var(--ink2)}
+.tabs button[aria-selected=true]{background:var(--ink);color:#fff}.tabs button[aria-selected=true] small{color:#cfe8c8}
+.mo{margin-top:10px}.mo .goal{font-weight:800;font-size:16px;margin-bottom:8px}
+.ws{display:grid;grid-template-columns:72px 1fr;gap:10px;padding:9px 0;border-top:1px dashed var(--line);font-size:14px}
+.ws>b{font-size:12.5px;color:var(--grass-d)}
+.need{font-size:12px;color:var(--warn);display:block;margin-top:2px}
+.out{margin-top:10px;background:var(--grass-s);border-radius:12px;padding:10px 12px;font-size:13.5px}
+.out b{color:var(--grass-d)}
+.cal{font-size:12.5px;color:var(--ink2);margin-top:8px}
+.disc li{font-size:14px;padding:8px 0 8px 22px;border-top:1px dashed var(--line);position:relative}
+.disc li::before{content:"?";position:absolute;left:2px;top:8px;font-weight:900;color:var(--grass-d)}
+.lnk{display:inline-block;margin-top:12px;font-weight:800;font-size:14px;padding:9px 16px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none}
+.note{font-size:12.5px;color:var(--ink2);padding:24px 0 44px}
+.sf{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 12px}
+.sf button{font-size:13px;font-weight:700;padding:5px 12px;border-radius:999px;border:1.5px solid var(--ink);background:var(--card)}
+.sf button[aria-pressed=true]{background:var(--ink);color:#fff}
+.ik h3{font-size:17px;font-weight:900;margin:18px 0 8px}
+.ki{display:grid;grid-template-columns:1fr auto;gap:2px 10px;padding:10px 0;border-top:1px dashed var(--line);font-size:14px}
+.ki b{font-weight:800}.ki p{grid-column:1/-1;font-size:13px;color:var(--ink2)}
+.ki .s{font-size:11px;font-weight:700;color:var(--grass-d);white-space:nowrap}
+.src{display:grid;gap:8px}@media(min-width:720px){.src{grid-template-columns:repeat(4,1fr)}}
+.src div{background:var(--grass-s);border-radius:12px;padding:10px 12px;font-size:13px}.src b{display:block;font-size:14px}
+</style></head><body>
+<header class="top"><div class="w">
+<small>FRESHJOY · 悦鲜活港新 · AI AGENT 驱动全域营销</small>
+<h1>落地方案<br>三步走</h1>
+<p>先建载体、把数据跑起来，再批量化营销，最后用线下互动造热点。附每月任务，供市场品牌部讨论细化。</p>
+<span class="tag">讨论稿 · 2026-11-19</span>
+</div></header>
+<nav class="bar"><div class="w" id="nav">
+<a href="#why">起点</a><a href="#road">路线图</a><a href="#p1">第一步</a><a href="#p2">第二步</a><a href="#p3">第三步</a><a href="#agent">Agent 整合</a><a href="#month">月度任务</a><a href="#intake">信息入口</a><a href="#talk">待讨论</a>
+</div></nav>
+<main class="w">
+
+<section id="why"><div class="hd"><span class="no">00</span><h2>起点：线下有销量，线上没数据</h2></div>
+<p class="lead">悦鲜活在港新的销售和真实顾客都在传统线下渠道，品牌拿不到线上用户数据和口碑，也就无法判断谁在买、为什么买、喝完怎么评价。</p>
+<div class="grid g3">
+<div class="card st"><span class="n">≈21</span><p>港新本地平台上能找到的公开提及 <span class="ag">Grokbot</span></p></div>
+<div class="card st"><span class="n">5</span><p>其中一手用户评价，全部在香港 <span class="ag">Grokbot</span></p></div>
+<div class="card st"><span class="n">≈5/178</span><p>小红书相关笔记里港新本地用户的占比 <span class="ag">OpenClaw</span></p></div>
+</div>
+<p class="lead" style="margin-top:12px">数据显示，现有口碑样本太少，不足以支撑定位判断。可考虑把“先获得第一批自有用户数据”作为第一步的核心目标。</p>
+</section>
+
+<section id="road"><div class="hd"><span class="no">01</span><h2>路线图</h2></div>
+<p class="lead">按六个月示意，每步约两个月，实际节奏可按预算和素材到位情况调整。</p>
+<div class="road">
+<a class="ph" href="#p1"><small>第 1–2 月 · 第一步</small><h3>建载体，跑数据</h3><p>网站、账号体系、视频矩阵起号、线下扫码导流</p></a>
+<a class="ph" href="#p2"><small>第 3–4 月 · 第二步</small><h3>批量化营销</h3><p>用数据选题，AI 批量生产内容，KOC 规模化</p></a>
+<a class="ph" href="#p3"><small>第 5–6 月 · 第三步</small><h3>线下互动造热点</h3><p>打卡点、联名、挑战赛，线上线下互相放大</p></a>
+</div>
+<div class="layer"><b>贯穿全程：</b>由 Agent 整合调研、数据、内容生产与分发，用 AI 生成的内容持续教育用户。人工负责审核和品牌把关。</div>
+</section>
+
+<section id="p1"><div class="hd"><span class="no">02</span><h2>第一步：建载体，把数据跑起来</h2></div>
+<p class="lead">目标是让线下顾客有一个扫码就能留下评价和反馈的地方，同时把品牌账号和视频矩阵立起来。</p>
+<div class="flow"><span>瓶贴 / 货架二维码</span><i>→</i><span>Freshjoy 网站</span><i>→</i><span>评价 · 问卷 · 投稿</span><i>→</i><span>用户数据库</span><i>→</i><span>Agent 分析</span></div>
+
+<details class="dim" open><summary><h3>Freshjoy 互动网站</h3><span class="pm"></span><p class="say">留存评价和反馈，挖掘用户行为、消费动机和产品意见</p></summary><div class="bd">
+<div class="row"><b>功能</b><ul><li>扫码打分和短评，可附照片</li><li>三问小问卷：在哪买、为什么买、怎么喝（直接喝、咖啡、给孩子等）</li><li>新鲜度反馈：购买时离到期还有几天</li><li>咖啡与食谱投稿，作为 UGC 素材池</li><li>留资换奖励（试饮券、抽奖），形成可再触达的用户名单</li></ul></div>
+<div class="row"><b>数据</b><ul><li>评价文本、评分、购买渠道与门店、饮用场景、购买动机、复购意向</li><li>Agent 按周汇总，打上动机和场景标签，回流给内容选题</li></ul></div>
+<div class="row"><b>注意</b><ul><li>需符合香港 PDPO、新加坡 PDPA，隐私政策和数据归属主体待品牌方确认</li><li>粤语繁体、英文、简体三语</li></ul></div>
+</div></details>
+
+<details class="dim"><summary><h3>品牌账号运营体系</h3><span class="pm"></span><p class="say">重新梳理 Instagram 等平台的账号定位、栏目和互动流程</p></summary><div class="bd">
+<div class="row"><b>平台</b><ul><li>Instagram、Facebook：品牌主阵地，港新是否分号可讨论</li><li>TikTok、YouTube Shorts：短视频曝光</li><li>小红书：覆盖香港本地用户和内地访港人群</li></ul></div>
+<div class="row"><b>体系</b><ul><li>统一人设和视觉，按品牌 VI 执行</li><li>固定栏目：新鲜溯源、清甜口感测评、咖啡场景、0 乳糖与 A2 科普</li><li>评论和私信统一回收，进入同一个用户数据库</li><li>互动 SOP 和负面回应口径（如“内地奶”“到期日近”）</li></ul></div>
+</div></details>
+
+<details class="dim"><summary><h3>视频矩阵与涨粉</h3><span class="pm"></span><p class="say">品牌主号加场景子号，加 KOC，起号阶段以真实素材为主</p></summary><div class="bd">
+<div class="row"><b>结构</b><ul><li>主号：品牌与新品信息</li><li>场景子号（可考虑）：咖啡、亲子早餐、运动健身</li><li>KOC：港新本地小达人试饮，首批小规模</li></ul></div>
+<div class="row"><b>依据</b><ul><li>小红书调研里咖啡场景和 0 乳糖是口碑最集中的点 <span class="ag">OpenClaw</span></li><li>口感被描述为“清甜无腥”而非浓郁，测评内容宜围绕这一点 <span class="ag">OpenClaw</span></li></ul></div>
+</div></details>
+
+<details class="dim"><summary><h3>曝光策略</h3><span class="pm"></span><p class="say">先把线下流量导到线上，再用小额投放测试内容</p></summary><div class="bd">
+<div class="row"><b>打法</b><ul><li>线下触点加二维码：瓶贴、冷柜、试饮台、门店海报</li><li>小预算投放测试多版内容，按数据留下表现好的方向</li><li>渠道合作：惠康、百佳、FairPrice 等店内物料与会员触达</li></ul></div>
+<div class="row"><b>观察</b><ul><li>扫码量、网站评价数、问卷完成数、粉丝增长、互动率</li><li>具体目标值建议在拿到销量和预算后与品牌方共同设定</li></ul></div>
+</div></details>
+</section>
+
+<section id="p2"><div class="hd"><span class="no">03</span><h2>第二步：批量化营销</h2></div>
+<p class="lead">在第一步有了数据和账号基础后，由 Agent 把“选题、生产、分发、复盘”串成循环，规模化产出内容。</p>
+<div class="flow"><span>用户数据与评论</span><i>→</i><span>Agent 选题</span><i>→</i><span>AI 批量生成</span><i>→</i><span class="h">人工审核</span><i>→</i><span>多账号分发</span><i>→</i><span>数据回流</span></div>
+<details class="dim" open><summary><h3>批量化的几条线</h3><span class="pm"></span><p class="say">内容、达人、投放三条线同时放量</p></summary><div class="bd">
+<div class="row"><b>内容</b><ul><li>同一主题生成粤语、英文、新加坡英语等多版本</li><li>科普类：新鲜链路、工艺、0 乳糖，用品牌方原始资料做底</li><li>种草类：咖啡配方、早餐场景、真实用户评价改编</li></ul></div>
+<div class="row"><b>达人</b><ul><li>KOC 从小规模扩到批量合作，素材二次授权进入素材池</li></ul></div>
+<div class="row"><b>投放</b><ul><li>广告语多版本 A/B 测试，所有广告语为 AI 草稿，需品牌方与法务确认后使用 <span class="draft">草稿</span></li></ul></div>
+<div class="row"><b>把关</b><ul><li>宣称只用法务批准的口径，代言人素材只在授权范围内使用</li></ul></div>
+</div></details>
+</section>
+
+<section id="p3"><div class="hd"><span class="no">04</span><h2>第三步：线下互动，造热点</h2></div>
+<p class="lead">用线下活动制造打卡和分享理由，让线上内容和线下体验互相放大。以下为可讨论的方向，均为草稿。</p>
+<div class="grid g2">
+<div class="card"><h3 style="font-size:16px">新鲜度打卡点 <span class="draft">草稿</span></h3><p style="font-size:13.5px;color:var(--ink2);margin-top:4px">在商场或渠道门店设快闪，把“从牧场到冷柜几天”做成可视化装置，拍照分享换试饮。</p></div>
+<div class="card"><h3 style="font-size:16px">咖啡店联名 <span class="draft">草稿</span></h3><p style="font-size:13.5px;color:var(--ink2);margin-top:4px">与港新本地咖啡店合作限定饮品，承接已有的咖啡场景口碑。</p></div>
+<div class="card"><h3 style="font-size:16px">UGC 挑战赛 <span class="draft">草稿</span></h3><p style="font-size:13.5px;color:var(--ink2);margin-top:4px">以网站投稿的配方或喝法为题，线上发起、线下颁奖，优质内容进入官方账号。</p></div>
+<div class="card"><h3 style="font-size:16px">节点营销 <span class="draft">草稿</span></h3><p style="font-size:13.5px;color:var(--ink2);margin-top:4px">结合农历新年等节点和渠道大促，做限定包装或礼盒，配合店内试饮。</p></div>
+</div>
+<p class="lead" style="margin-top:12px">病毒式传播难以预先保证，可考虑用第二步的数据先测哪类内容更容易被转发，再决定线下投入的方向。</p>
+</section>
+
+<section id="agent"><div class="hd"><span class="no">05</span><h2>Agent 整合</h2></div>
+<p class="lead">方案未来落在 Agent 整合架构上（架构名称待确认）。下面是各环节可由 Agent 承担的工作，人工保留审核和决策。</p>
+<div class="grid g2">
+<div class="card"><h3 style="font-size:15px">调研 Agent</h3><p style="font-size:13.5px;color:var(--ink2);margin-top:4px">持续抓取小红书、港新本地平台和公开网页的口碑与竞品动态。已在用：<span class="ag">OpenClaw</span><span class="ag">Grokbot</span><span class="ag">Raven</span><span class="ag">Claude</span></p></div>
+<div class="card"><h3 style="font-size:15px">数据 Agent</h3><p style="font-size:13.5px;color:var(--ink2);margin-top:4px">汇总网站评价、问卷和社媒评论，打动机与场景标签，每周出用户洞察。</p></div>
+<div class="card"><h3 style="font-size:15px">内容 Agent</h3><p style="font-size:13.5px;color:var(--ink2);margin-top:4px">按洞察出选题、脚本、图文和短视频初稿，多语言版本，送人工审核。</p></div>
+<div class="card"><h3 style="font-size:15px">分发与复盘 Agent</h3><p style="font-size:13.5px;color:var(--ink2);margin-top:4px">按账号排期发布，回收数据，标出表现好坏的内容，反馈给选题。</p></div>
+</div>
+</section>
+
+<section id="month"><div class="hd"><span class="no">06</span><h2>每月任务</h2></div>
+<p class="lead">点月份查看。标橙色的是需要品牌方先提供的素材或决定。</p>
+<div class="tabs" id="tabs" role="tablist"></div>
+<div class="card mo" id="mo"></div>
+<p class="cal">若 12 月启动，第 3 月恰逢农历新年（2027 年 2 月 6 日），可把节点内容提前放进第 2 月准备。</p>
+</section>
+
+<section id="intake"><div class="hd"><span class="no">07</span><h2>信息入口：需要品牌方给的支撑</h2></div>
+<p class="lead">方案要落地，需要两类信息：品牌方手里的数据，用来保证准确性；品牌已积累的素材，用来做差异化定位、科普和种草。点按钮看每一步依赖哪些。</p>
+<div class="sf" id="sf"><button data-s="0" aria-pressed="true">全部</button><button data-s="1" aria-pressed="false">第一步需要</button><button data-s="2" aria-pressed="false">第二步需要</button><button data-s="3" aria-pressed="false">第三步需要</button></div>
+<div class="card ik" id="ik"></div>
+<h3 style="font-size:17px;font-weight:900;margin:22px 0 8px">我们自建的信息入口</h3>
+<p class="lead" style="margin-bottom:10px">品牌方数据之外，以下入口会持续产生新数据，统一进入用户数据库，由数据 Agent 汇总。</p>
+<div class="src"><div><b>网站</b>评价、问卷、新鲜度反馈、投稿、留资</div><div><b>社媒账号</b>评论、私信、互动和完播数据</div><div><b>线下触点</b>扫码量、门店与渠道分布、试饮反馈</div><div><b>调研 Agent</b>小红书、港新本地平台、公开网页的口碑与竞品</div></div>
+<a class="lnk" href="../ask/">打开会议用素材清单（可勾选、可复制）→</a>
+</section>
+
+<section id="talk"><div class="hd"><span class="no">08</span><h2>待讨论</h2></div>
+<ul class="disc">
+<li>启动月份和六个月的预算区间</li>
+<li>港新两地账号合并还是分开运营</li>
+<li>瓶贴加二维码是否可行，改版周期多长</li>
+<li>网站收集的用户数据归属哪个主体</li>
+<li>每个阶段的目标值由谁来定、用什么基线</li>
+<li>Agent 整合架构的名称与对接方式</li>
+</ul>
+<a class="lnk" href="../ask/">查看素材清单 →</a>
+</section>
+
+<p class="note">调研数据由 AI 智能体自主完成，未经人工干预，标签为来源：OpenClaw＝小红书，Grokbot＝港新本地平台与价格，Raven＝内地消费者洞察报告，Claude＝公开网页与汇总。本页为供市场品牌部讨论细化的框架，任务安排、活动方向和广告语均为草稿，以品牌方确认为准。</p>
+</main>
+<script>
+var M=[
+{m:"第 1 月",s:"第一步",g:"打地基：素材到位，网站和账号设计完成",w:[
+["网站","确定功能与问卷题目，完成设计稿和三语文案","隐私政策与数据归属"],
+["账号","盘点现有账号，定人设、栏目、视觉规范和互动 SOP","现有账号清单与后台权限、VI 手册"],
+["视频","整理素材库，产出首批 10–20 条真实素材剪辑","视频与图片素材库及授权"],
+["线下","确认可放二维码的触点，设计扫码物料","瓶贴与门店物料审批流程"],
+["Agent","把调研 Agent 设为每周自动更新口碑与竞品",""]],o:"网站原型、账号规范、首批内容"},
+{m:"第 2 月",s:"第一步",g:"上线跑数据：网站开放，扫码导流开始",w:[
+["网站","上线，开放评价、问卷、投稿与留资",""],
+["账号","按栏目稳定更新，评论回收进数据库",""],
+["视频","主号起量，首批 KOC 试饮合作","KOL/KOC 合作历史与预算"],
+["线下","二维码物料进店，试饮台引导扫码","渠道配合"],
+["Agent","数据 Agent 出第一份用户洞察周报",""]],o:"第一批自有用户评价与动机数据"},
+{m:"第 3 月",s:"第二步",g:"批量化起步：内容生产线跑通",w:[
+["内容","按洞察选题，AI 批量产出多语言内容，人工审核后分发","法务批准的宣称口径"],
+["视频","场景子号视情况开设，素材复用到多账号",""],
+["投放","小预算 A/B 测试多版内容与广告语草稿","预算"],
+["节点","农历新年内容与店内活动（若时间吻合）",""]],o:"可复制的内容生产与审核流程"},
+{m:"第 4 月",s:"第二步",g:"放量：达人和投放规模化",w:[
+["达人","KOC 批量合作，优质内容二次授权进素材池",""],
+["内容","科普系列上线：新鲜链路、工艺、0 乳糖与 A2","牧场、工厂、工艺资料"],
+["投放","保留表现好的方向，加大投放",""],
+["Agent","复盘 Agent 每周标出高低表现内容，调整选题",""]],o:"稳定的内容节奏和第一轮转化数据"},
+{m:"第 5 月",s:"第三步",g:"线下互动：打卡点和联名落地",w:[
+["活动","快闪打卡点或渠道店内活动执行","场地与渠道资源"],
+["联名","咖啡店联名限定饮品（若通过讨论）",""],
+["线上","打卡内容实时回流到账号，配合挑战赛预热",""]],o:"线下活动带来的线上分享和新用户"},
+{m:"第 6 月",s:"第三步",g:"造热点：挑战赛和整体复盘",w:[
+["传播","UGC 挑战赛，优秀投稿上官方账号",""],
+["数据","半年用户数据复盘：画像、动机、口碑变化",""],
+["规划","基于数据调整定位与下半年计划，与品牌方共同设定目标",""]],o:"半年复盘报告与下一阶段方案"}];
+var tb=document.getElementById("tabs"),mo=document.getElementById("mo");
+tb.innerHTML=M.map(function(x,i){return '<button role="tab" data-i="'+i+'" aria-selected="'+(i==0)+'"><b>'+x.m+'</b><small>'+x.s+'</small></button>'}).join("");
+function show(i){var x=M[i];mo.innerHTML='<p class="goal">'+x.g+'</p>'+x.w.map(function(r){return '<div class="ws"><b>'+r[0]+'</b><div>'+r[1]+(r[2]?'<span class="need">需品牌方：'+r[2]+'</span>':'')+'</div></div>'}).join("")+'<p class="out"><b>本月产出：</b>'+x.o+'</p>';
+[].forEach.call(tb.children,function(b,j){b.setAttribute("aria-selected",j==i)})}
+tb.addEventListener("click",function(e){var b=e.target.closest("button");if(b)show(+b.dataset.i)});show(0);
+var K=[
+{h:"品牌方数据：保证准确性",i:[
+["销量与渠道数据","分市场、渠道、SKU 的月销量，网点分布，会员与复购数据","1,2,3"],
+["售价与促销日历","各渠道原价、促销价和周期，用于核实比价说法","1,2"],
+["生乳与成品检测报告","菌落、体细胞、蛋白、活性物质，支撑“奶源优于欧盟标准”","1,2"],
+["冷链与效期数据","出厂到上架天数、货架期，回应“到期日太近”","1,2"],
+["监管与合规文件","进口许可、食安中心与 SFA 检测记录、危机回应口径","1,2"],
+["用户反馈原始记录","客服、电商评论、促销员和试饮台反馈","1"],
+["现有账号后台数据","各平台粉丝、互动、历史内容数据导出","1"],
+["预算与目标基线","各阶段预算区间，品牌方期望的目标","1,2,3"]]},
+{h:"品牌已积累素材：定位、科普与种草",i:[
+["已批准的定位与宣称口径","可对外说的卖点、禁用词、法务审过的宣称","1,2"],
+["品牌 VI 与 Freshjoy 规范","官方色值、字体、Logo 源文件、包装展开图","1"],
+["官方产品图","白底图、场景图、3D 渲染，含经典款、A2、0 乳糖","1,2"],
+["视频与图片素材库","TVC、发布会、门店陈列、试饮活动原始素材与授权","1,2"],
+["代言人素材与授权","可用肖像和视频，授权平台、地区、期限","2,3"],
+["工艺与技术说明","0.09 秒等工艺的官方说明、专利或认证","2"],
+["牧场、工厂与运输资料","牧场、奶牛、江门工厂、海运链路的图文和视频","2,3"],
+["0 乳糖与 A2 产品说明","原理、适用人群、营养数据、已有科普稿","2"],
+["KOL/KOC 合作记录","达人名单、内容链接、投放效果、二次授权","1,2"],
+["专家与营养师资源","可授权引用的专业观点或文章","2"],
+["渠道与场地资源","商超、便利店、商场的联合营销与活动场地","3"]]}];
+var ik=document.getElementById("ik");
+function ri(f){ik.innerHTML=K.map(function(g){var r=g.i.filter(function(x){return !f||x[2].indexOf(f)>-1});return '<h3'+(g==K[0]?' style="margin-top:2px"':'')+'>'+g.h+'</h3>'+r.map(function(x){return '<div class="ki"><b>'+x[0]+'</b><span class="s">'+x[2].split(",").map(function(n){return "第"+"一二三".charAt(n-1)+"步"}).join(" · ")+'</span><p>'+x[1]+'</p></div>'}).join("")}).join("")}
+ri("");document.getElementById("sf").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;[].forEach.call(this.children,function(x){x.setAttribute("aria-pressed",x==b)});ri(b.dataset.s=="0"?"":b.dataset.s)});
+var as=[].slice.call(document.querySelectorAll("#nav a")),ss=as.map(function(a){return document.querySelector(a.getAttribute("href"))});
+addEventListener("scroll",function(){var k=0;ss.forEach(function(s,i){if(s.getBoundingClientRect().top<90)k=i});as.forEach(function(a,i){a.classList.toggle("on",i==k)});var o=as[k],nb=o.parentNode;if(o.offsetLeft<nb.scrollLeft||o.offsetLeft+o.offsetWidth>nb.scrollLeft+nb.clientWidth)nb.scrollLeft=o.offsetLeft-16},{passive:true});
+</script></body></html>
