@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>悦鲜活素材清单</title>
+<meta name="description" content="向悦鲜活品牌方索取的原始素材清单，用于核实数据、差异化定位、科普与种草内容。">
+<style>
+:root{--milk:#F7F8F2;--card:#fff;--ink:#14362A;--ink2:#55605A;--line:#E1E5DA;--grass:#3FAE2A;--grass-d:#1E7A14;--grass-s:#E7F5E1;--warn:#B4541A;--warn-s:#FBEBDD;
+--f:-apple-system,BlinkMacSystemFont,"PingFang SC","PingFang HK","Microsoft YaHei","Noto Sans CJK SC",sans-serif;--fn:"DIN Alternate","Avenir Next Condensed","Helvetica Neue",Arial,sans-serif;--r:16px;--pad:max(16px,env(safe-area-inset-left,0px))}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--milk);color:var(--ink);font-family:var(--f);font-size:15px;line-height:1.6}
+h1,h2,h3,p,ul{margin:0;padding:0}ul{list-style:none}button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;padding:0}
+.w{max-width:860px;margin:0 auto;padding:0 var(--pad)}
+.top{background:var(--ink);color:#fff;padding:40px 0 28px;position:relative;overflow:hidden}
+.top::after{content:"";position:absolute;right:-60px;top:-50px;width:200px;height:180px;background:var(--grass);border-radius:58% 42% 63% 37%/44% 59% 41% 56%}
+.top .w{position:relative;z-index:1}
+.top small{font-size:12px;letter-spacing:.18em;opacity:.75}
+.top h1{font-size:clamp(30px,9vw,46px);font-weight:900;line-height:1.15;margin-top:6px}
+.top p{opacity:.85;margin-top:10px;max-width:30em;font-size:14px}
+.bar{position:sticky;top:0;z-index:9;background:rgba(247,248,242,.96);border-bottom:1.5px solid var(--ink);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.bar .w{display:flex;gap:6px;align-items:center;padding-top:8px;padding-bottom:8px;overflow-x:auto;scrollbar-width:none}
+.bar .w::-webkit-scrollbar{display:none}
+.f{flex:none;font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;border:1.5px solid var(--ink);background:var(--card);white-space:nowrap}
+.f[aria-pressed=true]{background:var(--ink);color:#fff}
+.cnt{flex:none;margin-left:auto;font-family:var(--fn);font-weight:700;font-size:13px;color:var(--grass-d);white-space:nowrap;padding-left:8px}
+.grp{padding-top:30px}
+.grp h2{font-size:22px;font-weight:900;display:flex;align-items:baseline;gap:10px}
+.grp h2 .n{font-family:var(--fn);color:var(--grass);font-size:34px;line-height:1}
+.grp>p{color:var(--ink2);font-size:13.5px;margin:4px 0 12px}
+.it{background:var(--card);border:1.5px solid var(--ink);border-radius:var(--r);padding:12px 14px;margin-bottom:10px;display:grid;grid-template-columns:28px 1fr;gap:10px;transition:opacity .2s}
+.it.done{opacity:.5}.it.done h3{text-decoration:line-through}
+.ck{width:24px;height:24px;border-radius:7px;border:1.5px solid var(--ink);margin-top:1px;position:relative}
+.it.done .ck{background:var(--grass);border-color:var(--grass)}
+.it.done .ck::after{content:"";position:absolute;left:7px;top:3px;width:6px;height:11px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.it h3{font-size:15.5px;font-weight:800;line-height:1.4}
+.it .d{font-size:13.5px;color:var(--ink2);margin-top:3px}
+.it .y{font-size:13px;margin-top:6px;padding-left:10px;border-left:2px solid var(--grass)}
+.it .y b{color:var(--grass-d);font-size:12px;margin-right:4px}
+.p{font-size:11px;font-weight:700;border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:2px;white-space:nowrap}
+.p1{background:var(--warn-s);color:var(--warn)}.p2{background:#F3EFD9;color:#7A6410}.p3{background:#EFEFE8;color:var(--ink2)}
+.ag{display:inline-block;font-size:11px;padding:0 7px;border-radius:999px;border:1px solid var(--line);background:var(--milk);color:var(--ink2);margin-left:4px;white-space:nowrap}
+.qs{margin-top:30px;background:var(--grass-s);border:1.5px solid var(--ink);border-radius:var(--r);padding:16px}
+.qs h2{font-size:18px;font-weight:900;margin-bottom:8px}
+.qs li{font-size:14px;padding-left:22px;position:relative;margin:7px 0}
+.qs li::before{content:counter(q);counter-increment:q;position:absolute;left:0;top:1px;font-family:var(--fn);font-weight:700;color:var(--grass-d)}
+.qs ul{counter-reset:q}
+.act{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 10px}
+.btn{font-weight:800;font-size:14px;padding:10px 16px;border-radius:999px;background:var(--ink);color:#fff}
+.btn.o{background:var(--card);color:var(--ink);border:1.5px solid var(--ink)}
+.note{font-size:12.5px;color:var(--ink2);padding:6px 0 40px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:8px 16px;border-radius:999px;font-size:13px;opacity:0;transition:opacity .25s;pointer-events:none}
+.toast.on{opacity:1}
+textarea.cp{position:fixed;left:-9999px}
+.leg{font-size:12.5px;color:var(--ink2);margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+</style></head><body>
+<header class="top"><div class="w">
+<small>FRESHJOY · 悦鲜活港新 · 会议用</small>
+<h1>向品牌方要的<br>原始素材清单</h1>
+<p>用途：核实手册里的数字，坐实差异化定位，给科普和种草内容做底料，并为网站和账号“把数据跑起来”做准备。点每一项可勾“已拿到”，勾选只存在你自己的手机上。</p>
+</div></header>
+<nav class="bar"><div class="w" id="fl">
+<button class="f" data-p="0" aria-pressed="true">全部</button>
+<button class="f" data-p="1" aria-pressed="false">今天会上提</button>
+<button class="f" data-p="2" aria-pressed="false">两周内</button>
+<button class="f" data-p="3" aria-pressed="false">可后补</button>
+<span class="cnt" id="cnt"></span>
+</div></nav>
+<main class="w">
+<div class="leg"><span><i class="p p1">今天</i> 建议会上当面提</span><span><i class="p p2">两周</i> 第一阶段启动前需要</span><span><i class="p p3">后补</i> 批量化阶段再要</span></div>
+<div id="list"></div>
+<section class="qs"><h2>会上可以顺带确认的问题</h2><ul>
+<li>素材的对接人、交付方式（网盘/邮件）和内容审核需要几天？</li>
+<li>哪些说法法务已经批准可以对外讲，哪些词不能用？</li>
+<li>港新两地是一个品牌账号体系，还是分开运营？现有账号由谁管？</li>
+<li>瓶贴、货架、试饮台能不能加二维码，改版周期多长？</li>
+<li>线上收集的用户数据，品牌方希望归属在哪个主体名下？</li>
+</ul></section>
+<div class="act"><button class="btn" id="copy">复制清单，发微信</button><button class="btn o" id="reset">清空勾选</button></div>
+<p class="note">“为什么要”一栏里提到的情况来自此前的调研，标签为来源智能体：Grokbot＝港新本地平台与价格，OpenClaw＝小红书，Raven＝内地消费者洞察报告，Claude＝公开网页。调研均由 AI 智能体自主完成，结论待品牌方原始资料核实。清单为讨论用框架，可增删。</p>
+</main>
+<div class="toast" id="t"></div>
+<script>
+var G=[
+{h:"核实数据",s:"手册里引用的数字目前来自公开网页和第三方平台，需要品牌方原始数据确认。",i:[
+{t:"港新各渠道实际售价与促销日历",d:"香港惠康/百佳/7-Eleven、新加坡 FairPrice/Cold Storage/昇菘的原价、促销价和促销周期，分 SKU。",y:"公开抓取显示香港 HK$23 可能是促销价（原价约 HK$35），新加坡单瓶 S$5.25、两瓶 S$8.65，与日本奶的比价结论取决于此。",a:"Grokbot",p:1},
+{t:"销量与渠道数据",d:"分市场、分渠道、分 SKU 的月销量，网点清单（香港 1,500+ 网点的分布），有无会员或复购数据。",y:"这是线下唯一现成的“用户数据”，决定网站和账号先覆盖哪些区域、哪类门店。",a:"Claude",p:1},
+{t:"生乳与成品检测报告（原件）",d:"菌落总数、体细胞、蛋白质、乳铁蛋白、免疫球蛋白等活性物质的检测值，最好是第三方机构报告。",y:"“奶源优于欧盟标准”目前只有 2021 年公开报道的数字，需要最新报告才能对外使用。",a:"Claude",p:1},
+{t:"冷链与效期数据",d:"从出厂到港新上架的天数、货架期、各渠道临期处理方式。",y:"香港公开评价里“到期日太近”是主要负面之一，需要事实来回应。",a:"Grokbot",p:1},
+{t:"港新监管与合规文件",d:"进口许可、香港食安中心与新加坡 SFA 相关检测记录，2026 年 8 月香港通报事件的官方回应口径。",y:"港新消费者的信任路径依赖监管背书，同时需要统一的危机回应口径。",a:"Grokbot",p:2}]},
+{h:"差异化定位",s:"把“更新鲜、口感清甜无腥、更值得”讲实，需要品牌自己的证据和规范。",i:[
+{t:"已批准的定位与宣称口径",d:"品牌内部定位文件、可对外说的卖点、禁用词，港新广告法规下法务审过的宣称清单。",y:"手册里的定位和广告语都是 AI 草稿，需要对齐品牌方口径。",a:"Claude",p:1},
+{t:"工艺与技术说明",d:"0.09 秒杀菌等工艺的官方说明、专利或认证，与竞品工艺差别的内部资料。",y:"小红书调研显示伊利秒鲜已在宣传同类工艺，单讲“0.09 秒”区分度在下降。",a:"OpenClaw",p:1},
+{t:"品牌 VI 与 Freshjoy 英文规范",d:"VI 手册、官方色值、字体、Logo 源文件、包装展开图，Freshjoy 的英文书写和使用规范。",y:"现有手册的品牌色是按公开文章估的近似值，不是官方色值。",a:"Claude",p:2},
+{t:"官方产品图",d:"高清白底图、场景图、3D 渲染，含 0.09 经典款、A2 系列和 0 乳糖款。",y:"瓶型需要和实物一致，网站、账号和视频都要用。",a:"Claude",p:2},
+{t:"代言人与明星授权范围",d:"郭晶晶等代言人在港新可用的肖像、视频素材，授权平台、地区和期限。",y:"明星背书是港新信任路径之一，授权边界决定 AI 内容能不能用到代言人形象。",a:"OpenClaw",p:2}]},
+{h:"科普素材",s:"用于“教育用户”的底料，AI 生成内容需要可靠的事实来源。",i:[
+{t:"牧场与工厂资料",d:"牧场位置、奶牛品种与养殖方式、江门工厂、海运路径的介绍、照片和视频。",y:"“新鲜”需要看得见的链路，适合做溯源类科普和短视频。",a:"Claude",p:2},
+{t:"0 乳糖与 A2 产品说明",d:"两款产品的技术原理、适用人群、营养数据和已有的科普稿。",y:"小红书调研里 0 乳糖和咖啡场景是口碑最集中的点。",a:"OpenClaw",p:2},
+{t:"专家与营养师资源",d:"已合作的营养师、医生、乳业专家名单，可授权引用的观点或文章。",y:"港新信任度偏低时，第三方专业背书比品牌自述更容易被接受。",a:"Raven",p:3}]},
+{h:"种草内容",s:"现成素材越多，批量化阶段 AI 生成和剪辑的起点越高。",i:[
+{t:"现有视频和图片素材库",d:"TVC、K11 MUSEA 和圣淘沙发布会、门店陈列、试饮活动的原始素材（含未剪辑版本）及使用授权。",y:"视频矩阵启动初期需要真实素材打底，避免全部依赖生成内容。",a:"Claude",p:1},
+{t:"已有 KOL/KOC 合作与效果",d:"港新两地合作过的达人名单、内容链接、投放数据、二次使用授权。",y:"港新公开提及目前只有约 21 条，需要知道哪些已投放、效果如何。",a:"Grokbot",p:2},
+{t:"用户反馈原始记录",d:"客服记录、电商评论、门店促销员和试饮台收集的反馈。",y:"港新一手评价目前只找到 5 条，线下反馈是最直接的口碑来源。",a:"Grokbot",p:1}]},
+{h:"让数据跑起来",s:"建网站、建账号体系之前需要确认的资源和权限。",i:[
+{t:"现有社媒账号与后台权限",d:"Instagram、Facebook、TikTok、小红书、YouTube 等港新相关账号清单、管理方、历史数据导出。",y:"重新梳理账号运营体系的前提是知道现在有什么。",a:"Claude",p:1},
+{t:"可放二维码的线下触点",d:"瓶贴、货架、冷柜、试饮台、门店海报等位置，改版周期和审批流程。",y:"网站要靠线下扫码导流，才能把线下用户变成可追踪的线上数据。",a:"Claude",p:1},
+{t:"域名、官网现状与数据合规",d:"现有官网和域名、香港 PDPO 与新加坡 PDPA 下的数据合规负责人。",y:"网站收集评价和问卷需要隐私政策和数据主体安排。",a:"Claude",p:2},
+{t:"渠道联合营销资源",d:"惠康、百佳、FairPrice 等渠道的会员数据合作、联合促销或店内活动的可能性。",y:"可以作为第三阶段线下互动和打卡活动的场地与流量来源。",a:"Claude",p:3},
+{t:"预算范围与审批流程",d:"三个阶段的大致预算区间、内容审核人和审核时效。",y:"决定视频矩阵规模、投放节奏和每月任务能排多满。",a:"Claude",p:2}]}
+];
+var L={1:"今天",2:"两周",3:"后补"},K="yxh-ask-v1",st={};
+try{st=JSON.parse(localStorage.getItem(K)||"{}")}catch(e){}
+function save(){try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}}
+var box=document.getElementById("list"),n=0,h="";
+G.forEach(function(g,gi){h+='<section class="grp" data-g><h2><span class="n">0'+(gi+1)+'</span>'+g.h+'</h2><p>'+g.s+'</p>';
+g.i.forEach(function(x){n++;var id="i"+n;x.id=id;
+h+='<div class="it'+(st[id]?' done':'')+'" data-id="'+id+'" data-p="'+x.p+'" role="checkbox" aria-checked="'+(!!st[id])+'" tabindex="0"><span class="ck"></span><div><h3>'+x.t+'<i class="p p'+x.p+'">'+L[x.p]+'</i></h3><p class="d">'+x.d+'</p><p class="y"><b>为什么要</b>'+x.y+'<span class="ag">'+x.a+'</span></p></div></div>'});
+h+='</section>'});
+box.innerHTML=h;
+function count(){var a=document.querySelectorAll(".it"),d=0,v=0;for(var i=0;i<a.length;i++){if(a[i].style.display!="none"){v++;if(a[i].classList.contains("done"))d++}}document.getElementById("cnt").textContent="✓ "+d+"/"+v}
+box.addEventListener("click",function(e){var it=e.target.closest(".it");if(!it)return;var id=it.dataset.id;st[id]=!st[id];it.classList.toggle("done",st[id]);it.setAttribute("aria-checked",st[id]);save();count()});
+var fp=0;document.getElementById("fl").addEventListener("click",function(e){var b=e.target.closest(".f");if(!b)return;fp=+b.dataset.p;
+[].forEach.call(document.querySelectorAll(".f"),function(x){x.setAttribute("aria-pressed",x==b)});
+[].forEach.call(document.querySelectorAll(".it"),function(x){x.style.display=(!fp||+x.dataset.p==fp)?"":"none"});
+[].forEach.call(document.querySelectorAll("[data-g]"),function(s){s.style.display=s.querySelector('.it:not([style*="none"])')?"":"none"});count()});
+count();
+function toast(m){var t=document.getElementById("t");t.textContent=m;t.classList.add("on");setTimeout(function(){t.classList.remove("on")},1800)}
+document.getElementById("copy").onclick=function(){var s="悦鲜活（Freshjoy）港新｜需要品牌方提供的原始素材\n",k=0;
+G.forEach(function(g){var r=g.i.filter(function(x){return !fp||x.p==fp});if(!r.length)return;s+="\n【"+g.h+"】\n";r.forEach(function(x){k++;s+=k+". "+x.t+"（"+L[x.p]+"）："+x.d+"\n"})});
+var ta=document.createElement("textarea");ta.className="cp";ta.value=s;document.body.appendChild(ta);ta.select();var ok=false;try{ok=document.execCommand("copy")}catch(e){}document.body.removeChild(ta);
+if(!ok&&navigator.clipboard){navigator.clipboard.writeText(s).then(function(){toast("已复制")},function(){toast("复制失败，请长按选择文字")});return}toast(ok?"已复制，可直接粘贴到微信":"复制失败，请长按选择文字")};
+document.getElementById("reset").onclick=function(){st={};save();[].forEach.call(document.querySelectorAll(".it"),function(x){x.classList.remove("done");x.setAttribute("aria-checked","false")});count()};
+</script></body></html>
